@@ -5,5 +5,7 @@ btcsetup.sh installs all bitcoin dependecies
 setup scripts need to be run as sudo
 
 cd ~
+
 sudo ./devicesetup.sh
+
 sudo ./btcsetup.sh
