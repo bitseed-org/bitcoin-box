@@ -27,7 +27,8 @@ echo "running PID:"$x
 fi
 sleep 5s
 #get current block height from local bitcoin-cli and display current block
-bash btcinfo.sh &> info
+#bash btcinfo.sh &> info
+bash bitcoin-cli -datadir=/home/linaro/hdd/.bitcoin getinfo &> info
 sed -n 6p info > line1
 awk -F':' '{print $2}' line1 > tmp1
 awk -F',' '{print $1}' tmp1 > locblock
