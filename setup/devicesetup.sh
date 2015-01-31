@@ -14,6 +14,8 @@ sudo chmod 755 btcsetup.sh
 #change host name
 sudo rm /etc/hostname
 sudo echo "btc" >> /etc/hostname
+sudo rm /etc/hosts
+sudo cp /home/linaro/bitcoinbox/setup/hosts /etc/
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
