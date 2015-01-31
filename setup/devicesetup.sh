@@ -12,6 +12,7 @@ sudo rm /etc/mac
 #prep btc script
 sudo chmod 755 btcsetup.sh
 #change host name
+sudo hostname btc
 sudo rm /etc/hostname
 sudo echo "btc" >> /etc/hostname
 sudo rm /etc/hosts
