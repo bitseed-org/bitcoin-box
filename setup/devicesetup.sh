@@ -11,7 +11,7 @@ sudo apt-get install -y rsync
 sudo rm /etc/mac
 
 #disable screensaver becuase it uses too much CPU
-sudo rm /home/linaro/.config/lxsession/LXDE/autostart
+rm /home/linaro/.config/lxsession/LXDE/autostart
 echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
