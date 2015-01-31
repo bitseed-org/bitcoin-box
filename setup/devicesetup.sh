@@ -9,6 +9,8 @@ sudo apt-get -y upgrade
 sudo apt-get install -y rsync
 #allow device to generate a new mac
 sudo rm /etc/mac
+#prep btc script
+sudo chmod 755 btcsetup.sh
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
