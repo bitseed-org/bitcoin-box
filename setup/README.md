@@ -4,7 +4,7 @@ btcsetup.sh installs all bitcoin dependecies
 
 setup scripts need to be run as sudo
 
-cd ~
+cd /home/linaro/bitcoin-box
 
     sudo ./devicesetup.sh
    
