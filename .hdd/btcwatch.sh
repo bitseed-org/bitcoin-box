@@ -14,7 +14,7 @@ if [ "$x" == "" ]; then
     #if bitcoind did not start properly, restore .bitcoin directory from local backup
     echo "start failed, restoring from backup $(date)" >> /home/linaro/cron.log
     echo "start failed, * restoring from backup * will resatrt in about 1hr"
-    rsync --checksum -r /home/linaro/hdd/livebak/ /home/linaro/hdd/
+    rsync --checksum -r /home/linaro/hdd/livebak/ /home/linaro/hdd
     sleep 1m
     echo "start btc after restore"
     sh /home/linaro/hdd/btcstart.sh
@@ -44,7 +44,7 @@ rm line1
 if [ "$b" -lt "300000" ]; then
    sh /home/linaro/hdd/btcstop.sh
    sleep 10s
-   rsync --checksum -r /home/linaro/hdd/livebak/ /home/linaro/hdd/
+   rsync --checksum -r /home/linaro/hdd/livebak/ /home/linaro/hdd
    sleep 5s
    echo "start btc after restore"
    sh /home/linaro/hdd/btcstart.sh
