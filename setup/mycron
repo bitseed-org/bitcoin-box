@@ -1,0 +1,4 @@
+00 13 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 13 * * * echo "cron run $(date)" >> /home/linaro/cron.log
+00 10 * * * bash /home/linaro/hdd/backupdb.sh
+00 01 * * * bash /home/linaro/btcwatch.sh >> cron.log
