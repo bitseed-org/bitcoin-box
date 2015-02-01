@@ -6,6 +6,6 @@ setup scripts need to be run as sudo
 
 cd ~
 
-sudo ./devicesetup.sh
-
-sudo ./btcsetup.sh
+   sudo ./devicesetup.sh
+   ./btcsetup.sh
+   ./crontabsetup.sh
