@@ -33,8 +33,8 @@ sudo mkfs.ext4 /dev/sda1
 echo "mount HDD and setup fstab automount"
 sudo echo '/dev/sda1   /home/linaro/hdd   ext4   defaults  0  2' >> /etc/fstab
 mkdir /home/linaro/hdd
-sudo chown linaro:linaro /home/linaro/hdd
 sudo mount -a
+sudo chown linaro:linaro /home/linaro/hdd
 
 #swapfile setup
 echo "1GB swapfile setup on HDD"
