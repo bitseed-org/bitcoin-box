@@ -31,3 +31,9 @@ wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-qt
 chmod 755 bitcoind
 chmod 755 bitcoin-cli
 chmod 755 bitcoin-qt
+
+#get scripts
+cd ~
+git clone https://github.com/BitSeed-org/bitcoin-box
+cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro/hdd
+chmod 755 /home/linaro/hdd/*.sh
