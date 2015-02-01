@@ -21,3 +21,8 @@ sudo dpkg -i libdb4.8++-dev_4.8.30-10precise1_armhf.deb
 sudo dpkg -i libdb4.8-dev_4.8.30-11ubuntu1_armhf.deb
 sudo apt-get install -f
 cd ~
+
+#get binaries
+echo "getting bitcoin binaries"
+cd /home/linaro/hdd
+wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/
