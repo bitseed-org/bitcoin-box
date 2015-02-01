@@ -28,3 +28,6 @@ cd /home/linaro/hdd
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-cli
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoind
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-qt
+chmod 755 bitcoind
+chmod 755 bitcoin-cli
+chmod 755 bitcoin-qt
