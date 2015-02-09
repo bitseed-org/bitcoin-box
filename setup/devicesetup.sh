@@ -11,12 +11,6 @@ sudo apt-get install -y rsync
 sudo rm /etc/mac
 #prep btc script
 sudo chmod 755 btcsetup.sh
-#change host name
-sudo hostname btc
-sudo rm /etc/hostname
-sudo echo "btc" >> /etc/hostname
-sudo rm /etc/hosts
-sudo cp /home/linaro/bitcoinbox/setup/hosts /etc/
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
@@ -45,3 +39,10 @@ sudo chmod 0600 /home/linaro/hdd/swapfile
 sudo mkswap /home/linaro/hdd/swapfile
 sudo swapon  /home/linaro/hdd/swapfile
 sudo echo '/home/linaro/hdd/swapfile   none   swap  sw   0  0' >> /etc/fstab
+
+#change host name
+sudo hostname btc
+sudo rm /etc/hostname
+sudo echo "btc" >> /etc/hostname
+sudo rm /etc/hosts
+sudo cp /home/linaro/bitcoinbox/setup/hosts /etc/
