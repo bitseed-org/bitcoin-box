@@ -6,7 +6,8 @@ sudo mount /dev/nanda /media/boot #mount the boot flash
 sudo mount /dev/mmcblk0p1 /media/bootsd
 sudo cp /media/bootsd/script.bin /media/boot/ #xfer to boot flash
 sudo cp /media/bootsd/uImage /media/boot/ #xfer to boot flash
-sudo dd if=/dev/mmcblk0p2 of=/dev/nandd bs=1M # dd live root file system to nandd root fs
+echo "wait ~10 minutes to copy SD to NAND"
+sudo dd if=/dev/mmcblk0p2 of=/dev/nandd bs=1M # dd live root file system to nandd root fs
 sudo sync;
 sudo umount /media/boot
 sudo umount /media/bootsd
