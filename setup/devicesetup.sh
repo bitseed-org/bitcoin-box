@@ -18,6 +18,10 @@ echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
+#backup /home/linaro directory
+mkdir /tmp/tmp2
+cp -r /home/linaro/. /tmp/tmp2
+
 #format HDD
 echo "HDD formating"
 echo -e "o\nn\np\n1\n\n\nw" | sudo fdisk /dev/sda
@@ -25,20 +29,23 @@ sudo mkfs.ext4 /dev/sda1
 
 #add line to /etc/fstab to mount hdd
 echo "mount HDD and setup fstab automount"
-sudo echo '/dev/sda1   /home/linaro/hdd   ext4   defaults  0  2' >> /etc/fstab
-mkdir /home/linaro/hdd
+sudo echo '/dev/sda1   /home/linaro   ext4   defaults  0  2' >> /etc/fstab
+mkdir /home/linaro
 sudo mount -a
-sudo chown linaro:linaro /home/linaro/hdd
+sudo chown linaro:linaro /home/linaro
+
+#restore files to home directory /home/linaro
+cp -r /tmp/tmp2/. /home/linaro
 
 #swapfile setup
 echo "1GB swapfile setup on HDD"
 #dd line below not needed if hdd is pre-imaged with swapfile
-dd if=/dev/zero of=/home/linaro/hdd/swapfile bs=1024 count=1048576
-sudo chown root:root /home/linaro/hdd/swapfile
-sudo chmod 0600 /home/linaro/hdd/swapfile
-sudo mkswap /home/linaro/hdd/swapfile
-sudo swapon  /home/linaro/hdd/swapfile
-sudo echo '/home/linaro/hdd/swapfile   none   swap  sw   0  0' >> /etc/fstab
+dd if=/dev/zero of=/home/linaro/swapfile bs=1024 count=1048576
+sudo chown root:root /home/linaro/swapfile
+sudo chmod 0600 /home/linaro/swapfile
+sudo mkswap /home/linaro/swapfile
+sudo swapon  /home/linaro/swapfile
+sudo echo '/home/linaro/swapfile   none   swap  sw   0  0' >> /etc/fstab
 
 #change host name
 sudo hostname btc
