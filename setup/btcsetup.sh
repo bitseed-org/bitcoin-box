@@ -7,8 +7,8 @@ sudo apt-get install -y libqt4-dev libprotobuf-dev protobuf-compiler
 sudo apt-get install -y libminiupnpc-dev
 
 #Berkeley db 4.8 for wallet
-mkdir /home/linaro/hdd/deb
-cd /home/linaro/hdd/deb
+mkdir /home/linaro/deb
+cd /home/linaro/deb
 wget https://bittylicious.com/downloads/db4.8-util_4.8.30-11ubuntu1_armhf.deb
 wget https://bittylicious.com/downloads/libdb4.8++_4.8.30-10precise1_armhf.deb
 wget https://bittylicious.com/downloads/libdb4.8_4.8.30-11ubuntu1_armhf.deb
@@ -24,7 +24,7 @@ cd ~
 
 #get binaries
 echo "getting bitcoin binaries"
-cd /home/linaro/hdd
+cd /home/linaro
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-cli
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoind
 wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-qt
@@ -35,5 +35,5 @@ chmod 755 bitcoin-qt
 #get scripts
 cd ~
 git clone https://github.com/BitSeed-org/bitcoin-box
-cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro/hdd
-chmod 755 /home/linaro/hdd/*.sh
+cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro
+chmod 755 /home/linaro/*.sh
