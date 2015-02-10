@@ -1,5 +1,5 @@
-/.hdd contains the files to be copied to ~/hdd by the setup script
+/.hdd contains the files to be copied to ~/ by the setup script
 
-The hard drive is mounted as /home/linaro/hdd
+The hard drive is mounted as /home/linaro
 
-bitcoin files are locate on the hard drive ~/hdd
+bitcoin files are locate on the hard drive ~/
