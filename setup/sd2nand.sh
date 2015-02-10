@@ -10,4 +10,4 @@ sudo dd if=/dev/mmcblk0p2 of=/dev/nandd bs=1M # dd live root file system to nan
 sudo sync;
 sudo umount /media/boot
 sudo umount /media/bootsd
-sudo rm –r /media/boot /media/bootsd /media/rootfs
+sudo rm -r /media/boot /media/bootsd /media/rootfs
