@@ -1,2 +1,2 @@
-./bitcoin-cli -datadir=/home/linaro/hdd/.bitcoin getinfo
+./bitcoin-cli -datadir=/home/linaro/.bitcoin getinfo
 date
