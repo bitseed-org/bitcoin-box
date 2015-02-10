@@ -1,1 +1,1 @@
-/home/linaro/hdd/bitcoind -datadir=/home/linaro/hdd/.bitcoin -daemon
+/home/linaro/bitcoind -datadir=/home/linaro/.bitcoin -daemon
