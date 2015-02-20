@@ -8,7 +8,7 @@ sudo apt-get -y upgrade
 #rsync for database backup sync
 sudo apt-get install -y rsync
 #allow device to generate a new mac
-sudo rm /etc/mac
+#sudo rm /etc/mac
 #prep btc script
 sudo chmod 755 btcsetup.sh
 
@@ -29,23 +29,24 @@ sudo mkfs.ext4 /dev/sda1
 
 #add line to /etc/fstab to mount hdd
 echo "mount HDD and setup fstab automount"
-sudo echo '/dev/sda1   /home/linaro   ext4   defaults  0  2' >> /etc/fstab
-mkdir /home/linaro
+sudo echo '/dev/sda1   /home   ext4   defaults  0  2' >> /etc/fstab
+#mkdir /home
 sudo mount -a
-sudo chown linaro:linaro /home/linaro
+sudo chown linaro:linaro /home
 
 #restore files to home directory /home/linaro
+mkdir /home/linaro
 cp -r /tmp/tmp2/. /home/linaro
 
 #swapfile setup
 echo "1GB swapfile setup on HDD"
 #dd line below not needed if hdd is pre-imaged with swapfile
-dd if=/dev/zero of=/home/linaro/swapfile bs=1024 count=1048576
-sudo chown root:root /home/linaro/swapfile
-sudo chmod 0600 /home/linaro/swapfile
-sudo mkswap /home/linaro/swapfile
-sudo swapon  /home/linaro/swapfile
-sudo echo '/home/linaro/swapfile   none   swap  sw   0  0' >> /etc/fstab
+dd if=/dev/zero of=/home/swapfile bs=1024 count=1048576
+sudo chown root:root /home/swapfile
+sudo chmod 0600 /home/swapfile
+sudo mkswap /home/swapfile
+sudo swapon  /home/swapfile
+sudo echo '/home/swapfile   none   swap  sw   0  0' >> /etc/fstab
 
 #change host name
 sudo hostname btc
