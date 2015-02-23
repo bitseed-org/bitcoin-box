@@ -1,6 +1,14 @@
 #!/bin/bash
 #A watchdog script that keeps bitcoind running
 #for Linaro 14.04 12/31/2014
+#check system date
+d=$(date +%s)
+echo "$d"
+if [ "$d" -lt "1422748800" ]; then 
+  echo "date is incorrect"
+  exit 0  
+fi
+echo "date is > 2015-02-01, script will continue"
 date >> /home/linaro/cron.log
 #check if bitcoind is already running
 x=$(pgrep -f bitcoind)
@@ -28,7 +36,7 @@ fi
 sleep 5s
 #get current block height from local bitcoin-cli and display current block
 #bash btcinfo.sh &> info
-bash bitcoin-cli -datadir=/home/linaro/.bitcoin getinfo &> info
+./bitcoin-cli -datadir=/home/linaro/.bitcoin getinfo &> info
 sed -n 6p info > line1
 awk -F':' '{print $2}' line1 > tmp1
 awk -F',' '{print $1}' tmp1 > locblock
