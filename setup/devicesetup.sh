@@ -8,7 +8,7 @@ sudo apt-get -y upgrade
 #rsync for database backup sync
 sudo apt-get install -y rsync
 #allow device to generate a new mac
-#sudo rm /etc/mac
+sudo rm /etc/mac #delete mac address so device will geneate new address at 1st boot
 #prep btc script
 sudo chmod 755 btcsetup.sh
 sudo chmod 755 *.sh
