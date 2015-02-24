@@ -1,4 +1,5 @@
 #run from SD card, copies SD card image to NAND
+#sudo rm /etc/mac #delete mac address so that device will generate a new unique address at 1st boot
 sudo umount /dev/mmcblk0p1
 sudo mkdir /media/bootsd
 sudo mkdir /media/boot #create mount point for boot flash part of nand
