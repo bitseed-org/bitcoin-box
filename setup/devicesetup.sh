@@ -11,6 +11,7 @@ sudo apt-get install -y rsync
 #sudo rm /etc/mac
 #prep btc script
 sudo chmod 755 btcsetup.sh
+sudo chmod 755 *.sh
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
