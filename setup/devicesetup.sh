@@ -32,7 +32,7 @@ echo "mount HDD and setup fstab automount"
 sudo echo '/dev/sda1   /home   ext4   defaults  0  2' >> /etc/fstab
 #mkdir /home
 sudo mount -a
-sudo chown linaro:linaro /home
+sudo chown -R linaro:linaro /home
 
 #restore files to home directory /home/linaro
 mkdir /home/linaro
