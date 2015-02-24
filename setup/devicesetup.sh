@@ -53,4 +53,4 @@ sudo hostname btc
 sudo rm /etc/hostname
 sudo echo "btc" >> /etc/hostname
 sudo rm /etc/hosts
-sudo cp /home/linaro/bitcoinbox/setup/hosts /etc/
+sudo cp /home/linaro/bitcoin-box/setup/hosts /etc/
