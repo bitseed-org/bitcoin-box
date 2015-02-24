@@ -1,6 +1,6 @@
-sudo adduser crypti
-sudo cp -r /home/linaro/.[a-zA-Z0-9]* /home/crypti
-sudo cp -r /home/linaro/* /home/crypti
-sudo adduser crypti sudo
-sudo chown -R crypti:users /home/crypti/.*
-sudo chown -R crypti:users /home/crypti/*
+sudo adduser btc
+sudo cp -r /home/linaro/.[a-zA-Z0-9]* /home/btc   
+sudo cp -r /home/linaro/* /home/btc   
+sudo adduser btc sudo
+sudo chown -R btc:users /home/btc/.*
+sudo chown -R btc:users /home/btc/*
