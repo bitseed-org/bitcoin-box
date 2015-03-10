@@ -26,9 +26,10 @@ cd ~
 #get binaries
 echo "getting bitcoin binaries"
 cd /home/linaro
-wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-cli
-wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoind
-wget http://www.bitseed.org/bc-blockchain/binaries/btc093pcd3/bitcoin-qt
+wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-cli
+wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoind
+wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-qt
+wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-tx
 chmod 755 bitcoind
 chmod 755 bitcoin-cli
 chmod 755 bitcoin-qt
