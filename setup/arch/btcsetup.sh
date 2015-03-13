@@ -29,7 +29,7 @@ chmod 755 bitcoind
 chmod 755 bitcoin-cli
 chmod 755 bitcoin-qt
 
-#get scripts
+#get script
 cd ~
 #git clone https://github.com/BitSeed-org/bitcoin-box
 #cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro
