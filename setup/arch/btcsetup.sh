@@ -1,5 +1,6 @@
 #dependencies
-sudo pacman -S -noconfirm build-essential libtool autotools-dev autoconf pkg-config libssl-dev libgmp-dev libtool libboost-all-devv
+sudo pacman -S -noconfirm build-essential libtool autotools-dev autoconf pkg-config libssl-dev libgmp-dev libtool libboost-all-dev
+
 sudo pacman -S -noconfirm libqt4-dev libprotobuf-dev protobuf-compiler libminiupnpc-dev bsdmainutils libqrencode-dev
 
 #Berkeley db 4.8 for wallet
