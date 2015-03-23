@@ -1,3 +1,12 @@
+#add respositories
+sudo cp /etc/pacman.conf /etc/pacmanconf.bak
+sudo chmod 666 /etc/pacman.conf
+sudo echo 'Server = http://ca.us.mirror.archlinuxarm.org/armv7h/community' >> /etc/pacman.conf
+sudo echo 'Server = http://ca.us.mirror.archlinuxarm.org/armv7h/core' >> /etc/pacman.conf
+sudo echo 'Server = http://ca.us.mirror.archlinuxarm.org/armv7h/extra' >> /etc/pacman.conf
+sudo echo 'Server = http://ca.us.mirror.archlinuxarm.org/armv7h/alrm' >> /etc/pacman.conf
+sudo pacman -Syy
+sudo pacman -S rsync wget
 #dependencies
 sudo pacman -S --noconfirm build-essential libtool autotools-dev autoconf pkg-config libssl-dev libgmp-dev libtool libboost-all-dev
 
@@ -21,11 +30,11 @@ cd ~
 
 #get binaries
 echo "getting bitcoin binaries"
-cd /home/namecoin
-wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-cli
-wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoind
-wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-qt
-wget http://www.bitseed.org/bc-blockchain/binaries/btc0.10.0/bitcoin-tx
+cd /home/btc
+wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-cli
+wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoind
+wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-tx
+wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-qt
 chmod 755 bitcoind
 chmod 755 bitcoin-cli
 chmod 755 bitcoin-qt
