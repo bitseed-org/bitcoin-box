@@ -55,6 +55,7 @@ sudo rm /etc/hostname
 sudo echo "btc" >> /etc/hostname
 sudo rm /etc/hosts
 sudo cp /home/linaro/bitcoin-box/setup/hosts /etc/
+sudo chown -R linaro:linaro /home
 
 echo "next step:  reboot via sudo reboot"
 echo "after reboot, run ./btcsetup.sh"
