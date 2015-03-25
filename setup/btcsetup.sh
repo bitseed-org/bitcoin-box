@@ -40,6 +40,8 @@ chmod 755 bitcoin-qt
 
 #get scripts
 cd ~
-git clone https://github.com/BitSeed-org/bitcoin-box
+#git clone https://github.com/BitSeed-org/bitcoin-box
 cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro
 chmod 755 /home/linaro/*.sh
+
+echo "next step:  download blockchain"
