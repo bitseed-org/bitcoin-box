@@ -20,6 +20,8 @@ echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/
 echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #backup /home/linaro directory
+rm -rf Templates
+rm -rf Arduino
 mkdir /tmp/tmp2
 cp -r /home/linaro/. /tmp/tmp2
 
