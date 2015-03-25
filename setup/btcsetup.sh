@@ -45,3 +45,4 @@ cp -r /home/linaro/bitcoin-box/.hdd/* /home/linaro
 chmod 755 /home/linaro/*.sh
 
 echo "next step:  download blockchain"
+echo "bitcoin setup complete" >> /home/linaro/setup.log
