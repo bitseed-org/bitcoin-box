@@ -26,13 +26,13 @@ sudo apt-get install -f
 cd ~
 
 #get binaries
-echo "getting bitcoin binaries"
-cd /home/linaro
-wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-cli
-wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoind
-wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-tx
-wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin.conf
-wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-qt
+#echo "getting bitcoin binaries"
+#cd /home/linaro
+#wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-cli
+#wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoind
+#wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-tx
+#wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin.conf
+#wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-qt
 
 chmod 755 bitcoind
 chmod 755 bitcoin-cli
