@@ -25,8 +25,8 @@ echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/
 #backup /home/linaro directory
 rm -rf Templates
 rm -rf Arduino
-mkdir /tmp/tmp2
-cp -r /home/linaro/. /tmp/tmp2
+#mkdir /tmp/tmp2
+#cp -r /home/linaro/. /tmp/tmp2
 
 #add line to /etc/fstab to mount hdd
 echo "mount HDD and setup fstab automount"
@@ -36,13 +36,13 @@ sudo mount -a
 sudo chown -R linaro:linaro /home
 
 #restore files to home directory /home/linaro
-mkdir /home/linaro
-cp -r /tmp/tmp2/. /home/linaro
+#mkdir /home/linaro
+#cp -r /tmp/tmp2/. /home/linaro
 
 #swapfile setup
 echo "1GB swapfile setup on HDD"
 #dd line below not needed if hdd is pre-imaged with swapfile
-#dd if=/dev/zero of=/home/swapfile bs=1024 count=1048576
+dd if=/dev/zero of=/home/swapfile bs=1024 count=1048576
 sudo chown root:root /home/swapfile
 sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
