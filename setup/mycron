@@ -1,6 +1,9 @@
-00 13 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 13 * * * echo "cron run $(date)" >> /home/linaro/cron.log
-00 10 * * * bash /home/linaro/backupdb.sh
+00 10 * * 0 bash /home/linaro/backupdb.sh
 00 01 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 20 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 06 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 04 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 07 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 13 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 13 * * * echo "cron run $(date)" >> cron.log
+00 16 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 19 * * * bash /home/linaro/btcwatch.sh >> cron.log
+00 22 * * * bash /home/linaro/btcwatch.sh >> cron.log
