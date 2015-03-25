@@ -1,7 +1,6 @@
 #prepares the device but does not format the HDD
 #intended for when you have a pre-imaged HDD with blockchain installed
 #prep OS
-#prep OS
 sudo apt-get update
 #install nano for editing (and ntp to set the system clock - may not be needed for 14.12)
 sudo apt-get install -y nano
@@ -16,11 +15,6 @@ sudo rm /etc/mac #delete mac address so device will geneate new address at 1st b
 sudo chmod 755 btcsetup.sh
 sudo chmod 755 *.sh
 
-#disable screensaver becuase it uses too much CPU
-rm /home/linaro/.config/lxsession/LXDE/autostart
-echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #backup /home/linaro directory
 rm -rf Templates
@@ -48,6 +42,12 @@ sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 sudo echo '/home/swapfile   none   swap  sw   0  0' >> /etc/fstab
+
+#disable screensaver becuase it uses too much CPU
+rm /home/linaro/.config/lxsession/LXDE/autostart
+echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #change host name
 sudo hostname btc
