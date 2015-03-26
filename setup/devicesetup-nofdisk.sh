@@ -45,6 +45,9 @@ sudo echo '/home/swapfile   none   swap  sw   0  0' >> /etc/fstab
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
+mkdir /home/linaro/.config/
+mkdir /home/linaro/.config/lxsession/
+mkdir /home/linaro/.config/lxsession/LXDE/
 echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
