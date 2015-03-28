@@ -1,7 +1,7 @@
 
 #!/bin/bash
 #A watchdog script that keeps bitcoind running
-#for Linaro 14.04 12/31/2014
+#for Linaro 14.04 3/27/2015
 #check system date
 d=$(date +%s)
 echo "$d"
