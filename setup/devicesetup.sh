@@ -2,6 +2,8 @@
 sudo apt-get update
 #install nano for editing (and ntp to set the system clock - may not be needed for 14.12)
 sudo apt-get install -y nano
+#install hdparm so disk write cache can be disabled - reduce corruption due to power loss
+sudo apt-get install -y hdparm
 #sudo apt-get install -y ntp
 #sudo service ntp restart
 sudo apt-get -y upgrade
