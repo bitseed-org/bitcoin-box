@@ -17,8 +17,8 @@ if [ "$x" == "" ]; then
   #if bitcoind not running then start it
   echo "start btc"
   ./bitcoind -daemon
-  echo "wait 10 min and check if running"
-  sleep 10m
+  echo "wait 15 min and check if running"
+  sleep 15m
   x=$(pgrep -f bitcoind)
   echo "PID:"$x
   if [ "$x" == "" ]; then
@@ -38,8 +38,8 @@ if [ "$x" == "" ]; then
   fi
 else
  echo "already running PID:"$x
- echo "wait 10 min then check block status"
- sleep 10m
+ echo "wait 15 min then check block status"
+ sleep 15m
  #get current block height from local bitcoin-cli and display current block
  #bash btcinfo.sh &> info
  ./bitcoin-cli -datadir=/home/linaro/.bitcoin getinfo &> info
