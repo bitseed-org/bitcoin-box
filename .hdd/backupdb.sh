@@ -8,7 +8,7 @@ else
   sh /home/linaro/btcstop.sh
   sleep 5s 
   echo "backing up db"
-  rsync --checksum -r /home/linaro/.bitcoin /home/linaro/livebak
+  rsync --checksum --info=progress2 -r /home/linaro/.bitcoin /home/linaro/livebak
   echo $(date) >> /home/linaro/cron.log
   echo "db backup run $(date)" >> /home/linaro/cron.log
   echo "db backup run $(date)" >> /home/linaro/bak.log
