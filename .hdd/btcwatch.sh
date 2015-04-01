@@ -1,7 +1,15 @@
 
 #!/bin/bash
 #A watchdog script that keeps bitcoind running
-#for Linaro 14.04 3/27/2015
+#for Linaro 14.04 3/31/2015
+#check if rsync in pregress"
+z=$(pgrep -f rsync)
+if [ "$z" != "" ]; then 
+echo "rsync running - dont start btc"
+exit
+else
+echo "rync not running - ok"
+fi
 #check system date
 d=$(date +%s)
 echo "$d"
