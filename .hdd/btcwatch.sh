@@ -40,6 +40,7 @@ if [ "$x" == "" ]; then
     sleep 1m
     echo "start btc after restore due to fail to run"
     ./bitcoind -daemon
+    exit
   else
     echo "restart success"
     echo "btc restarted $(date)" >> /home/linaro/cron.log
