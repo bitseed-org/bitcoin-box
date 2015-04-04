@@ -1,13 +1,12 @@
 These scripts prepare and configure the device before bitcoin is installed
-devicesetup.sh updates and prepares the device and mounts the harddisk
+
+devicesetup.sh updates and prepares the device and mounts the hard disk
+
 btcsetup.sh installs all bitcoin dependecies
 
 setup scripts need to be run as sudo
 
-cd /home/linaro/bitcoin-box
-
+    cd ~/bitcoin-box
     sudo ./devicesetup.sh
-   
-   ./btcsetup.sh
-   
-   ./crontabsetup.sh
+    sudo ./btcsetup.sh
+    sudo ./crontabsetup.sh
