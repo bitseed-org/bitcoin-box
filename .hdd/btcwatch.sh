@@ -2,13 +2,13 @@
 #!/bin/bash
 #A watchdog script that keeps bitcoind running
 #for Linaro 14.04 3/31/2015
-#check if rsync in pregress"
-z=$(pgrep -f rsync)
+#check if backup is in progress"
+z=$(pgrep -f backupdb)
 if [ "$z" != "" ]; then 
-echo "rsync running - dont start btc"
-exit
+  echo "backupdb.sh is running - not starting bitcoind"
+  exit
 else
-echo "rync not running - ok"
+  echo "backupdb.sh is not running - continuing"
 fi
 #check system date
 d=$(date +%s)
@@ -23,22 +23,22 @@ date >> /home/linaro/cron.log
 x=$(pgrep -f bitcoind)
 if [ "$x" == "" ]; then
   #if bitcoind not running then start it
-  echo "start btc"
+  echo "starting bitcoind"
   ./bitcoind -daemon
-  echo "wait 15 min and check if running"
+  echo "waiting 15 min to check if bitcoind is running"
   sleep 15m
   x=$(pgrep -f bitcoind)
   echo "PID:"$x
   if [ "$x" == "" ]; then
     #if bitcoind did not start properly, restore .bitcoin directory from local backup
     echo "start failed, restoring from backup $(date)" >> /home/linaro/cron.log
-    echo "start failed, * restoring from backup * will resatrt in about 1hr"
+    echo "start failed, * restoring from backup * will restart in about 1hr"
     rm -rf /home/linaro/.bitcoin
     mkdir /home/linaro/.bitcoin
     cp /home/linaro/livebak/.bitcoin/bitcoin.conf /home/linaro/.bitcoin/
     rsync --checksum -r --info=progress2 /home/linaro/livebak/ /home/linaro
     sleep 1m
-    echo "start btc after restore due to fail to run"
+    echo "start bitcoind after restore due to run failure"
     ./bitcoind -daemon
     exit
   else
@@ -47,7 +47,7 @@ if [ "$x" == "" ]; then
   fi
 else
  echo "already running PID:"$x
- echo "wait 15 min then check block status"
+ echo "wait 15 min to check block height"
  sleep 15m
  #get current block height from local bitcoin-cli and display current block
  #bash btcinfo.sh &> info
@@ -65,7 +65,7 @@ else
  #check of local blockchain is way out of date, if so, restore from backup
  echo "at block:"$b
  if [ "$b" -lt "300000" ]; then
-   echo "oops! blockheight less than 300K - restoring from backup"
+   echo "oops! block height less than 300K - restoring from backup"
    sh /home/linaro/btcstop.sh
    sleep 5s
    rm -rf /home/linaro/.bitcoin
@@ -73,7 +73,7 @@ else
    cp /home/linaro/livebak/.bitcoin/bitcoin.conf /home/linaro/.bitcoin/
    rsync --checksum -r --info=progress2 /home/linaro/livebak/ /home/linaro
    sleep 5s
-   echo "start btc after restore due to low block count"
+   echo "starting bitcoind after restore due to low block height"
    sh /home/linaro/btcstart.sh
  fi
 fi
