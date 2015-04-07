@@ -1,9 +1,4 @@
-00 10 * * 0 bash /home/linaro/backupdb.sh
-00 01 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 04 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 07 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 13 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 13 * * * echo "cron run $(date)" >> cron.log
-00 16 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 19 * * * bash /home/linaro/btcwatch.sh >> cron.log
-00 22 * * * bash /home/linaro/btcwatch.sh >> cron.log
+# back up blockchain data every Sunday morning at 4:10 AM
+10 4 * * 0 bash /home/linaro/backupdb.sh
+# check that bitcoind is running at the top of every hour
+00 * * * * bash /home/linaro/btcwatch.sh >> cron.log

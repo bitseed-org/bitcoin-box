@@ -1,10 +1,10 @@
 #!/bin/bash
 x=$(pgrep -f bitcoind)
 if [ "$x" == "" ]; then 
-  echo "btc not running"
-  echo "btc not running $(date)" >> bak.log 
+  echo "bitcoind not running"
+  echo "bitcoind not running $(date)" >> bak.log
 else
-  echo "stop bitcoind to run backup"  
+  echo "stopping bitcoind to run backup"
   sh /home/linaro/btcstop.sh
   sleep 5s 
   echo "backing up db"
@@ -12,6 +12,6 @@ else
   echo $(date) >> /home/linaro/cron.log
   echo "db backup run $(date)" >> /home/linaro/cron.log
   echo "db backup run $(date)" >> /home/linaro/bak.log
-  echo "backup complete. restart bitcoind"
+  echo "backup complete. restarting bitcoind"
   sh /home/linaro/btcstart.sh
 fi
