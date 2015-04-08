@@ -8,7 +8,7 @@ echo "Enter device serial number:"
 read serial
 echo $serial > deviceid
 echo $serial > /var/www/html/serial
-
+sudo chown www-data:www-data /var/www/html/serial
 
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
