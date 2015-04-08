@@ -56,7 +56,7 @@ else
  #bash btcinfo.sh &> info
  ./bitcoin-cli getblockcount > locblock
  b=$(<locblock)
- echo"Local Block: $b"
+ echo" Local Block: $b"
  
  #check of local blockchain is way out of date, if so, restore from backup
  echo "at block:"$b
