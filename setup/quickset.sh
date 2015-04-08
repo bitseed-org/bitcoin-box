@@ -3,6 +3,13 @@ cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
 sudo chown -R linaro:linaro /home/linaro
 chmod 755 /home/linaro/*.sh
 
+#set serial number
+echo "Enter device serial number:"
+read serial
+echo $serial > deviceid
+echo $serial > /var/www/html/serial
+
+
 #disable screensaver becuase it uses too much CPU
 rm /home/linaro/.config/lxsession/LXDE/autostart
 echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
