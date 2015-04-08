@@ -1,34 +1,21 @@
 #!/bin/bash
 #get current block height from blockchain.info
-wget https://blockchain.info/latestblock &> /dev/null
-sed -n 7p latestblock > line
-#cat line
-awk -F':' '{print $2}' line > tmp
-awk -F',' '{print $1}' tmp > bciblock
-echo -n "Current Block: "
-cat bciblock
-rm tmp
-rm latestblock
+echo $(date)
+wget wget https://blockchain.info/q/getblockcount &> /dev/null
+netblk=$(<getblockcount)
+echo "Current Block: $netblk"
 
 #get current block from local bitcoin-cli
-bash btcinfo.sh &> info 
-sed -n 6p info > line1
-#cat line1
-awk -F':' '{print $2}' line1 > tmp1
-awk -F',' '{print $1}' tmp1 > locblock
-echo -n "Local Block: "
-cat locblock
-rm tmp1
-rm info
-rm line1
-echo $(date)
-a=$(<bciblock)
-b=$(<locblock)
-if [ "$b" == "" ]; then
+./bitcoin-cli getblockcount > locblock
+nodeblk=$(<locblock)
+echo "Local Block: $nodeblk"
+
+#if bitcoin-cli responds, compare local with network blocks
+if [ "$nodeblk" == "" ]; then
  echo "checking recent blocks.  please wait"
 else
-diff=$((a-b))
+diff=$((netblk-nodeblk))
 echo "$diff" "blocks behind"
-rm bciblock
+rm getblockcount
 rm locblock
 fi
