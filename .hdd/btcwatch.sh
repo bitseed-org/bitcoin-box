@@ -1,7 +1,7 @@
-
 #!/bin/bash
 #A watchdog script that keeps bitcoind running
-#for Linaro 14.04 3/31/2015
+#for Linaro 14.04 4/7/2015
+
 #check if rsync in pregress"
 z=$(pgrep -f rsync)
 if [ "$z" != "" ]; then 
@@ -10,6 +10,7 @@ exit
 else
 echo "rync not running - ok"
 fi
+
 #check system date
 d=$(date +%s)
 echo "$d"
@@ -19,6 +20,7 @@ if [ "$d" -lt "1422748800" ]; then
 fi
 echo "system date is > 2015-02-01, script will continue"
 date >> /home/linaro/cron.log
+
 #check if bitcoind is already running
 x=$(pgrep -f bitcoind)
 if [ "$x" == "" ]; then
@@ -49,19 +51,13 @@ else
  echo "already running PID:"$x
  echo "wait 15 min then check block status"
  sleep 15m
+ 
  #get current block height from local bitcoin-cli and display current block
  #bash btcinfo.sh &> info
- ./bitcoin-cli -datadir=/home/linaro/.bitcoin getinfo &> info
- sed -n 6p info > line1
- awk -F':' '{print $2}' line1 > tmp1
- awk -F',' '{print $1}' tmp1 > locblock
- echo -n "Local Block: "
- #cat locblock
+ ./bitcoin-cli getblockcount > locblock
  b=$(<locblock)
- echo $b
- rm tmp1
- rm info
- rm line1
+ echo"Local Block: $b"
+ 
  #check of local blockchain is way out of date, if so, restore from backup
  echo "at block:"$b
  if [ "$b" -lt "300000" ]; then
