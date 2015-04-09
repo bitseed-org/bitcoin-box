@@ -6,6 +6,8 @@ sudo cp -r BitcoinNodeAdmin/wallet_dark/* /var/www/html
 sudo chown www-data:www-data /var/www/html
 echo "replace this line in /home/linaro/reward-addr with bitcoin address" > /home/linaro/reward-addr
 
+echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
+
 #-------------------------------------------
 #Upgrading Bitseed devcies S/N 30 and earlier
 #-----------------------------------------
