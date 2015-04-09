@@ -17,9 +17,11 @@ echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/
 echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #dd line below not needed if hdd is pre-imaged with swapfile
-echo "seting up swap"
+echo "setting up swap"
 dd if=/dev/zero of=/home/swapfile bs=1024 count=1048576
 sudo chown root:root /home/swapfile
 sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
+
+echo "quickset done" > setup.log
