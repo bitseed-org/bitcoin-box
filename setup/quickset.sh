@@ -6,7 +6,7 @@ chmod 755 /home/linaro/*.sh
 #set serial number
 echo "Enter device serial number:"
 read serial
-echo $serial > "deviceid-$serial"
+echo $serial > /home/linaro/"deviceid-$serial"
 echo $serial > /var/www/html/serial
 sudo chown www-data:www-data /var/www/html/serial
 
