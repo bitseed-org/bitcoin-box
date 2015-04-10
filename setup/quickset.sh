@@ -26,6 +26,6 @@ sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
 #install web UI admin panel
-sudo admin-panel-install.sh
+sudo ./admin-panel-install.sh
 
 echo "quickset done" > setup.log
