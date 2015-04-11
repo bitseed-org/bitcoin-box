@@ -28,4 +28,4 @@ sudo swapon  /home/swapfile
 #install web UI admin panel
 sudo ./admin-panel-install.sh
 
-echo "quickset done" > setup.log
+echo "quickset done" > /home/linaro/bitcoin-box/setup/setup.log
