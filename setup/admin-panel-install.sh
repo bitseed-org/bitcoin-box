@@ -17,8 +17,9 @@ echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
 #upgrade scripts
 #rm -rf bitcoin-box
 #./gitclone.sh
-#cd bitcoin-box/setup
+#sudo apt-get install -y php5 php5-curl
 #cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
 #sudo chown -R linaro:linaro /home/linaro
 #chmod 755 /home/linaro/*.sh
+#cd bitcoin-box/setup
 #sudo ./admin-panel-install.sh
