@@ -31,4 +31,6 @@ Features
 
 Documentation
 ----------------
-The Bitseed Personal Server requires minimal configuration and maintenance, but there is an excellent guide for node operators [located here](https://bitcoin.org/en/full-node).
+The Bitseed Personal Server requires minimal configuration and maintenance; the Quickstart Guide can be [found  here](https://bitseed.org/bitseed-bitcoin-edition-quickstart-guide/).
+
+There is also an excellent guide for node operators [located here](https://bitcoin.org/en/full-node).
