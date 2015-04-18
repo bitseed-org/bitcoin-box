@@ -73,3 +73,4 @@ else
    sh /home/linaro/btcstart.sh
  fi
 fi
+rm locblock

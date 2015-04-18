@@ -1,13 +1,13 @@
 #run as sudo
 #installs admin panel into /var/www/html
-#sudo apt-get install -y php5 php5-curl
+sudo apt-get install -y php5 php5-curl
 git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
 sudo cp -r BitcoinNodeAdmin/wallet_dark/* /var/www/html
 sudo chown www-data:www-data /var/www/html
 sudo /etc/init.d/apache2 restart
+
 echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
 echo "replace this line with your bitcoin address" > /home/linaro/reward-addr
-
 echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
 
 #-------------------------------------------
