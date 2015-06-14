@@ -33,5 +33,8 @@ sudo swapon  /home/swapfile
 #install web UI admin panel
 sudo ./admin-panel-install.sh
 
+#delete mac address so device will create a new unique mac
+rm /etc/mac
+
 echo "1.0.1" > /home/linaro/version
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
