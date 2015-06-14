@@ -1,4 +1,5 @@
 #set up devide after reflashing nand
+#** run as sudo **
 #assumes HDD still contains original config
 #clone latest code
 rm -rf ~/bitcoin-box
