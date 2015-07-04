@@ -1,7 +1,7 @@
 #!/bin/bash
 #get current block height from blockchain.info
 echo $(date)
-wget https://blockchain.info/q/getblockcount &> /dev/null
+wget -4 https://blockchain.info/q/getblockcount &> /dev/null
 netblk=$(<getblockcount)
 echo "Current Block: $netblk"
 
