@@ -6,4 +6,5 @@ rm bitcoin-cli
 rm bitcoin-tx
 rm bitcoin-qt
 unzip bitcoinarm.zip
+rm bitcoinarm.zip
 echo "bitcoin core upgraded"
