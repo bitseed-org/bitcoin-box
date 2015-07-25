@@ -9,7 +9,7 @@ ur="url=hppt://$ipadrpt"
 echo "$ur"
 echo "Enter bitcoin address to receive rewards:"
 rm reward-addr
-./bitcoin-cli getnewaddress > reward-addr
+read reward-addr
 btcadr=$(<reward-addr)
 echo "public IP:$ipadr"
 echo "bitcoin address:$btcadr"
