@@ -8,3 +8,4 @@
 00 16 * * * bash /home/linaro/btcwatch.sh >> cron.log
 00 19 * * * bash /home/linaro/btcwatch.sh >> cron.log
 00 22 * * * bash /home/linaro/btcwatch.sh >> cron.log
+* * * * * bash /home/linaro/restartbtc.sh
