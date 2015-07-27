@@ -2,7 +2,8 @@
 #!/bin/bash
 #stops and starts bitcoind when restartflag file is set to 1
 #does nothing in all other cases
-#intended to be run every minute by cronttab
+#intended to be run every minute by cronttab:
+#* * * * * bash /home/linaro/restartbtc.sh
 rsflag=$( < /home/linaro/restartflag)
 echo "Flag= $rsflag"
 if (( rsflag == 1 )); then
