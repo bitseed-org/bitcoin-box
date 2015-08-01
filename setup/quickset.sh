@@ -1,8 +1,18 @@
+#!/bin/bash
+#installs and configures software for bitseed V2
+#must run as sudo
+#reboot when complete.  Device will have a new mac and ip address
+
 sudo rm /etc/mac
 cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
 sudo chown -R linaro:linaro /home/linaro
 chmod 755 /home/linaro/*.sh
 chmod 755 /home/linaro/bitcoin-box/setup/*sh
+
+#install php GUI
+#public UI on port 80
+#private coontrols on port 81
+sudo ./admin-v2-install.sh
 
 #set serial number
 echo "Enter device serial number:"
@@ -24,9 +34,6 @@ sudo chown root:root /home/swapfile
 sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
-
-#install web UI admin panel
-sudo ./admin-panel-install.sh
 
 echo "2.0" > /home/linaro/version
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
