@@ -1,5 +1,5 @@
 30 10 * * 0 bash /home/linaro/backupdb.sh
 00 */2 * * * bash /home/linaro/btcwatch.sh
 00 13 * * * echo "cron run $(date)" >> cron.log
-* * * * * bash /home/linaro/restartbtc.sh  >> cron.log
-00 08 * * 2 bash /home/linaro/checkupdates.sh
+* * * * * bash /home/linaro/restartbtc.sh
+00 08 * * 2 bash /home/linaro/checkupdates.sh  >> cron.log
