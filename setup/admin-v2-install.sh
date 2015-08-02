@@ -9,6 +9,7 @@ sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/public
 sudo cp BitcoinNodeAdmin/public/index.php /var/www/public/
 sudo chown -R www-data:www-data /var/www/html
 sudo chown -R www-data:www-data /var/www/public
+sudo chmod 666 /home/linaro/restartflag
 sudo cp BitcoinNodeAdmin/public/000-default.conf  /etc/apache2/sites-enabled/
 sudo cp BitcoinNodeAdmin/public/ports.conf  /etc/apache2/
 sudo /etc/init.d/apache2 restart
