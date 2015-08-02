@@ -54,9 +54,9 @@ sudo swapon  /home/swapfile
 sudo echo '/home/swapfile   none   swap  sw   0  0' >> /etc/fstab
 
 #change host name
-sudo hostname btc
+sudo hostname bitseed
 sudo rm /etc/hostname
-sudo echo "btc" >> /etc/hostname
+sudo echo "bitseed" >> /etc/hostname
 sudo rm /etc/hosts
 sudo cp /home/linaro/bitcoin-box/setup/hosts /etc/
 
