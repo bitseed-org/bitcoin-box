@@ -13,6 +13,7 @@ chmod 755 /home/linaro/bitcoin-box/setup/*sh
 #public UI on port 80
 #private coontrols on port 81
 sudo ./admin-v2-install.sh
+sudo chmod 666 /home/linaro/restartflag
 
 #set serial number
 echo "Enter device serial number:"
