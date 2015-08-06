@@ -1,2 +1,2 @@
 * * * * * bash /root/safestop.sh
-00 02 * * 6 bash /home/linaro/v2update.sh
+* * * * * bash /home/linaro/v2update.sh
