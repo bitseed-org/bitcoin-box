@@ -16,6 +16,8 @@ sudo /etc/init.d/apache2 restart
 
 #echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
 echo "replace this line with your bitcoin address" > /home/linaro/reward-addr
+sudo cp /home/linaro/bitcoin-box/.hdd/checkupdates.sh /home/linaro
+sudo chown 755 /home/linaro/checkupdates.sh
 echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
 
 #-------------------------------------------
