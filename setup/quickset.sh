@@ -36,5 +36,5 @@ sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
-echo "2.0" > /home/linaro/version
+echo "200" > /home/linaro/version
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
