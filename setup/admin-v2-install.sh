@@ -12,6 +12,10 @@ sudo chown -R www-data:www-data /var/www/public
 sudo chmod 666 /home/linaro/restartflag
 sudo cp BitcoinNodeAdmin/public/000-default.conf  /etc/apache2/sites-enabled/
 sudo cp BitcoinNodeAdmin/public/ports.conf  /etc/apache2/
+sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
+sudo chown www-data:www-data /var/www/html/*.txt
+sudo chmod 666 /var/www/html/*.txt
+
 sudo /etc/init.d/apache2 restart
 
 #echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
