@@ -20,6 +20,7 @@ sudo cp bitcoin-box/.hdd/bconf /home/linaro
 sudo chmod 666 /home/linaro/bconf
 sudo cp bitcoin-box/.hdd/updateflag /home/linaro
 sudo chmod 666 /home/linaro/updateflag
+sudo echo "200" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
 
