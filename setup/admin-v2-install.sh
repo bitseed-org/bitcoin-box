@@ -16,9 +16,9 @@ sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
 sudo chown www-data:www-data /var/www/html/*.txt
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
-sudo cp bitcoin-box/.hdd/bconf /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/bconf /home/linaro
 sudo chmod 666 /home/linaro/bconf
-sudo cp bitcoin-box/.hdd/updateflag /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/updateflag /home/linaro
 sudo chmod 666 /home/linaro/updateflag
 sudo echo "200" > /home/linaro/version
 
