@@ -1,14 +1,14 @@
 #deletes the current bitcoind and bitcoin-cli binray files
 #downloads XT 0.11a binaries and installs them
-echo "removing bitcoin core and intsalling XT ... starts in 10 sec"
+echo "removing bitcoin core and installing XT ... starts in 10 sec"
 sleep 10s
-#get XT binary files fron bitseed.org
+#get XT binary files from bitseed.org
 wget https://www.bitseed.org/device/bitcoin-xt-0.11a/bitcoin-xt-0.11a.zip
 
 #stop bitcoin
 bitcoin-cli stop
 
-#remove ild bitcoin binaries
+#remove old bitcoin binaries
 rm /home/linaro/bitcoind
 rm /home/linaro/bitcoin-cli
 
