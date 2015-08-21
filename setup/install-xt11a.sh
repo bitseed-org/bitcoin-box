@@ -18,4 +18,4 @@ cp /home/linaro/bitcoin-xt-0.11a/bitcoin*  /home/linaro
 
 #restart bitcoind
 echo "XT installed, bitcoin will now restart.  Allow about 10 minutes before it is active"
-bash /home/linaro/btcwatch.sh
+bash bitcoind -daemon
