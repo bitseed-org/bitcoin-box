@@ -3,6 +3,8 @@
 echo "removing bitcoin core and installing XT ... starts in 10 sec"
 sleep 10s
 #get XT binary files from bitseed.org
+rm bitcoin-xt-0.11a.zip
+rm -rf bitcoin-xt-0.11a
 wget https://www.bitseed.org/device/bitcoin-xt-0.11a/bitcoin-xt-0.11a.zip
 
 #stop bitcoin
