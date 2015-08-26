@@ -5,7 +5,7 @@
 #intended to be run every minute by cronttab:
 #* * * * * bash /home/linaro/restartbtc.sh
 rsflag=$( < /home/linaro/restartflag)
-echo "Flag= $rsflag"
+#echo "Flag= $rsflag"
 if (( rsflag == 1 )); then
  echo "restarting bitcoind, please wait"
 echo 0 > /home/linaro/restartflag
