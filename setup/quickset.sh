@@ -37,5 +37,5 @@ sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
 echo "200" > /home/linaro/version
-sudo chown linaro:linaro checkupdates.sh
+sudo chown linaro:linaro /home/linaro/checkupdates.sh
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
