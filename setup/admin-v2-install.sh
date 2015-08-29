@@ -28,6 +28,8 @@ sudo /etc/init.d/apache2 restart
 echo "replace this line with your bitcoin address" > /home/linaro/reward-addr
 sudo cp /home/linaro/bitcoin-box/.hdd/checkupdates.sh /home/linaro
 sudo chown 755 /home/linaro/checkupdates.sh
+sudo apt-get install dnsutils
+
 echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
 
 #-------------------------------------------
