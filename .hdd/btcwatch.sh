@@ -2,6 +2,9 @@
 #A watchdog script that keeps bitcoind running
 #for Linaro 14.04 4/7/2015
 
+#get public IP and write to disk
+dig +short myip.opendns.com @resolver1.opendns.com > extip
+
 #check if rsync in pregress"
 z=$(pgrep -f rsync)
 if [ "$z" != "" ]; then 
