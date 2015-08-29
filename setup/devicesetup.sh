@@ -6,6 +6,7 @@ sudo apt-get install -y nano
 sudo apt-get install -y hdparm
 #sudo apt-get install -y ntp
 #sudo service ntp restart
+sudo apt-get install dnsutils
 sudo apt-get -y upgrade
 #rsync for database backup sync
 sudo apt-get install -y rsync
