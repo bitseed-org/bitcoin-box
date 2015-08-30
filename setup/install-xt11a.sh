@@ -9,6 +9,7 @@ wget https://www.bitseed.org/device/bitcoin-xt-0.11a/bitcoin-xt-0.11a.zip
 
 #stop bitcoin
 bitcoin-cli stop
+sleep 10s
 
 #remove old bitcoin binaries
 rm /home/linaro/bitcoind
@@ -20,4 +21,5 @@ cp bitcoin-xt-0.11a/bitcoin*  /home/linaro
 
 #restart bitcoind
 echo "XT installed, bitcoin will now restart.  Allow about 10 minutes before it is active"
+sleep 5s
 bitcoind -daemon
