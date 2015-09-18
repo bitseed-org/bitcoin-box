@@ -46,7 +46,7 @@ chmod 755 /home/linaro/*.sh
 
 #disable HDD disk write cache - reduce chance of corruption due to power loss
 sudo chown linaro:linaro /etc/hdparm.conf
-echo 'write_cache = off' >> write_cache = off
+echo 'write_cache = off' >> /etc/hdparm.conf
 sudo chown root:root /etc/hdparm.conf
 
 echo "next step:  download blockchain"
