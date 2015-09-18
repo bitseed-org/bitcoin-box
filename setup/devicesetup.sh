@@ -17,10 +17,10 @@ sudo chmod 755 btcsetup.sh
 sudo chmod 755 *.sh
 
 #disable screensaver becuase it uses too much CPU
-rm /home/linaro/.config/lxsession/LXDE/autostart
-echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
+#rm /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #backup /home/linaro directory
 rm -rf Templates
