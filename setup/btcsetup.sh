@@ -1,8 +1,7 @@
 
 #dependencies
 sudo apt-get install -y build-essential libtool autotools-dev autoconf pkg-config libssl-dev libgmp-dev libtool libboost-all-dev
-sudo apt-get install -y libqrencode-dev
-sudo apt-get install -y libqtgui4
+sudo apt-get install -y libqrencode-dev libqtgui4
 sudo apt-get install -y libqt4-dev libprotobuf-dev protobuf-compiler
 sudo apt-get install -y libminiupnpc-dev
 sudo apt-get install -y bsdmainutils
