@@ -29,9 +29,9 @@ mkdir /tmp/tmp2
 cp -r /home/linaro/. /tmp/tmp2
 
 #format HDD
-echo "HDD formating"
-echo -e "o\nn\np\n1\n\n\nw" | sudo fdisk /dev/sda
-sudo mkfs.ext4 /dev/sda1
+#echo "HDD formating"
+#echo -e "o\nn\np\n1\n\n\nw" | sudo fdisk /dev/sda
+#sudo mkfs.ext4 /dev/sda1
 
 #add line to /etc/fstab to mount hdd
 echo "mount HDD and setup fstab automount"
