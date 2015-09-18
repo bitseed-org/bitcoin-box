@@ -6,6 +6,8 @@ sudo apt-get install -y libqt4-dev libprotobuf-dev protobuf-compiler
 sudo apt-get install -y libminiupnpc-dev
 sudo apt-get install -y bsdmainutils
 
+sudo apt-get install -y apache2
+
 #Berkeley db 4.8 for wallet
 #mkdir /home/linaro/deb
 cd /home/linaro/deb
