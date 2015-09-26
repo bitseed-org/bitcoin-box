@@ -24,6 +24,7 @@ echo $serial > /var/www/html/serial
 sudo chown www-data:www-data /var/www/html/serial
 
 #disable screensaver becuase it uses too much CPU
+sudo mv /etc/init/lxdm.conf /etc/init/lxdm.conf.nostart
 rm /home/linaro/.config/lxsession/LXDE/autostart
 echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
 echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
