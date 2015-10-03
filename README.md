@@ -1,16 +1,16 @@
-# bitcoin-box
-A low cost Bitcoin node device
+# Litecoin Full Node
+Litecoin for Bitseed
 
-The Bitseed Personal Server - Bitcoin Core
+The Bitseed Personal Server - Litecoin Core
 ----------------
 
-The [Bitseed Personal Server](https://bitseed.org/shop/) is a small and inexpensive device that is dedicated to running [Bitcoin Core](https://github.com/bitcoin/bitcoin) (the Satoshi client.) It is a small server that runs a full bitcoin node, which stores and validates the complete blockchain, and transmits transactions across the bitcoin network. The Bitseed Personal Server is not a Bitcoin miner, thus it does not earn bitcoin, but as a full node it provides an [essential service](https://medium.com/@lopp/bitcoin-nodes-how-many-is-enough-9b8e8f6fd2cf) to the network.
+The [Bitseed Personal Server](https://bitseed.org/shop/) is a small and inexpensive device that is dedicated to running Litecoin Core. It is a small server that runs a full bitcoin node, which stores and validates the complete blockchain, and transmits transactions across the bitcoin network. The Bitseed Personal Server is not a Litecoin miner, thus it does not earn litecoin, but as a full node it provides an [essential service](https://medium.com/@lopp/bitcoin-nodes-how-many-is-enough-9b8e8f6fd2cf) to the network.
 
 Benefits
 ----------------
 
 * Maintains the full blockchain stored inside the device
-* Runs the "Satoshi" open source client ([Bitcoin Core](https://github.com/bitcoin/bitcoin))
+* Runs the "Satoshi" open source client
 * Can serve as a trusted node for phones, tablets, and PCs running lightweight (SPV) clients
 * Can be used as a local blockchain database for advanced blockchain applications
 * Lower cost than 1 year of a VPS service
