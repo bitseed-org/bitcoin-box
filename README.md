@@ -1,7 +1,7 @@
 # bitcoin-box
 A low cost Bitcoin node device
 
-The Bitseed Personal Server
+The Bitseed Personal Server - Bitcoin Core
 ----------------
 
 The [Bitseed Personal Server](https://bitseed.org/shop/) is a small and inexpensive device that is dedicated to running [Bitcoin Core](https://github.com/bitcoin/bitcoin) (the Satoshi client.) It is a small server that runs a full bitcoin node, which stores and validates the complete blockchain, and transmits transactions across the bitcoin network. The Bitseed Personal Server is not a Bitcoin miner, thus it does not earn bitcoin, but as a full node it provides an [essential service](https://medium.com/@lopp/bitcoin-nodes-how-many-is-enough-9b8e8f6fd2cf) to the network.
@@ -27,7 +27,7 @@ Features
 * Power consumption is less than 10 watts (about 10% of a typical PC)
 * 1GB RAM and 1 GHz Dual Core ARM processor
 * OS is Ubuntu 14.04 with optional GUI desktop.  It can support a mouse, keyboard, and HDMI monitor if desired.
-* 160 GB storage will support bitcoin blockchain for years
+* 250 GB storage will support bitcoin blockchain for years
 
 Documentation
 ----------------
