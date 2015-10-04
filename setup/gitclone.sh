@@ -1,7 +1,6 @@
 #gets latest code from github
 git clone https://github.com/BitSeed-org/bitcoin-box
-sudo chmod 755 /home/linaro/bitcoin-box/setup/quickset.sh
-cd bitcoin-box/setup
+sudo chmod 755 $HOME/bitcoin-box/setup/quickset.sh
 
-echo "gitclone done" > /home/linaro/bitcoin-box/setup/setup.log
+echo "gitclone done" > $HOME/bitcoin-box/setup/setup.log
 
