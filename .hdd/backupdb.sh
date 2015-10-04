@@ -1,17 +1,26 @@
 #!/bin/bash
-x=$(pgrep -f bitcoind)
+
+#which coin are we running?
+coin=$( < $HOME/coin)
+echo "$coin"
+coincli="$coin""-cli"
+coind="$coin""d"
+coindir=".""$coin"
+coinconf="$coin"".conf"
+
+x=$(pgrep -f $coind)
 if [ "$x" == "" ]; then 
-  echo "btc not running"
-  echo "btc not running $(date)" >> bak.log 
+  echo "$coin not running"
+  echo "$coin not running $(date)" >> bak.log 
 else
-  echo "stop bitcoind to run backup"  
-  sh /home/linaro/btcstop.sh
+  echo "stop $coind to run backup"  
+  ./coinstop.sh
   sleep 5s 
   echo "backing up db"
-  rsync --checksum --info=progress2 -r /home/linaro/.bitcoin /home/linaro/livebak
-  echo $(date) >> /home/linaro/cron.log
-  echo "db backup run $(date)" >> /home/linaro/cron.log
-  echo "db backup run $(date)" >> /home/linaro/bak.log
-  echo "backup complete. restart bitcoind"
-  sh /home/linaro/btcstart.sh
+  rsync --checksum --info=progress2 -r $HOME/$coindir $HOME/livebak
+  echo $(date) >> $HOME/cron.log
+  echo "db backup run $(date)" >> $HOME/cron.log
+  echo "db backup run $(date)" >> $HOME/bak.log
+  echo "backup complete. restart $coind"
+  ./coinwatch.sh
 fi

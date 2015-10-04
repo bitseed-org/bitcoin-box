@@ -2,13 +2,22 @@
 #A watchdog script that keeps bitcoind running
 #for Linaro 14.04 4/7/2015
 
+#which coin are we running?
+coin=$( < $HOME/coin)
+echo "$coin"
+coincli="$coin""-cli"
+coind="$coin""d"
+coindir=".""$coin"
+coinconf="$coin"".conf"
+
+
 #get public IP and write to disk
 dig +short myip.opendns.com @resolver1.opendns.com > extip
 
-#check if rsync in pregress"
+#check if rsync in progress"
 z=$(pgrep -f rsync)
 if [ "$z" != "" ]; then 
-echo "rsync running - dont start btc"
+echo "rsync running - dont start $coin"
 exit
 else
 echo "rync not running - ok"
@@ -18,36 +27,37 @@ fi
 d=$(date +%s)
 echo "$d"
 if [ "$d" -lt "1422748800" ]; then
-  echo "system date is incorrect, aborted startup" >> /home/linaro/cron.log
+  echo "system date is incorrect, aborted startup" >> $HOME/cron.log
   exit 0
 fi
 echo "system date is > 2015-02-01, script will continue"
 
 #check if bitcoind is already running
-x=$(pgrep -f bitcoind)
+x=$(pgrep -f $coind)
+echo "x:$x"
 if [ "$x" == "" ]; then
   #if bitcoind not running then start it
-  echo "start btc"
-  ./bitcoind -daemon
-  echo "wait 15 min and check if running"
-  sleep 15m
-  x=$(pgrep -f bitcoind)
+  echo "start $coin"
+  $coind -daemon
+  echo "wait 10 min and check if running"
+  sleep 10m
+  x=$(pgrep -f $coind)
   echo "PID:"$x
   if [ "$x" == "" ]; then
     #if bitcoind did not start properly, restore .bitcoin directory from local backup
     echo "start failed, restoring from backup $(date)" >> /home/linaro/cron.log
     echo "start failed, * restoring from backup * will resatrt in about 1hr"
-    rm -rf /home/linaro/.bitcoin
-    mkdir /home/linaro/.bitcoin
-    cp /home/linaro/livebak/.bitcoin/bitcoin.conf /home/linaro/.bitcoin/
-    rsync --checksum -r --info=progress2 /home/linaro/livebak/ /home/linaro
+    rm -rf $HOME/$coindir
+    mkdir $HOME/$coindir
+    cp $HOME/livebak/$coindir/$coinconf $HOME/$coindir/
+    rsync --checksum -r --info=progress2 $HOME/livebak/ $HOME
     sleep 1m
-    echo "start btc after restore due to fail to run"
-    ./bitcoind -daemon
+    echo "start $coin after restore due to fail to run"
+    $coind -daemon
     exit
   else
     echo "restart success"
-    echo "btc restarted $(date)" >> /home/linaro/cron.log
+    echo "$coin restarted $(date)" >> $HOME/cron.log
   fi
 else
  echo "already running PID:"$x
@@ -56,7 +66,7 @@ else
  
  #get current block height from local bitcoin-cli and display current block
  #bash btcinfo.sh &> info
- ./bitcoin-cli getblockcount > locblock
+ $coincli getblockcount > locblock
  b=$(<locblock)
  echo " Local Block: $b"
  rm locblock
@@ -64,14 +74,14 @@ else
  echo "at block:"$b
  if [ "$b" -lt "300000" ]; then
    echo "oops! blockheight less than 300K - restoring from backup"
-   sh /home/linaro/btcstop.sh
+   sh $HOME/coinstop.sh
    sleep 5s
-   rm -rf /home/linaro/.bitcoin
-   mkdir /home/linaro/.bitcoin
-   cp /home/linaro/livebak/.bitcoin/bitcoin.conf /home/linaro/.bitcoin/
-   rsync --checksum -r --info=progress2 /home/linaro/livebak/ /home/linaro
+   rm -rf $HOME/$coindir
+   mkdir $HOME/$coindir
+   cp $HOME/livebak/$coindir/$coinconf $HOME/$coindir/
+   rsync --checksum -r --info=progress2 $HOME/livebak/ $HOME
    sleep 5s
-   echo "start btc after restore due to low block count"
-   sh /home/linaro/btcstart.sh
+   echo "start $coin after restore due to low block count"
+   $coind -daemon
  fi
 fi

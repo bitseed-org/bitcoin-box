@@ -1,0 +1,10 @@
+coin=$( < $HOME/coin)
+echo "$coin"
+coincli="$coin""-cli"
+coind="$coin"+"d"
+
+a=".""$coin"
+echo "$a"
+
+b="$coin"".conf"
+echo "$b"
