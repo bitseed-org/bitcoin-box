@@ -17,13 +17,17 @@ if (( rsflag == 1 )); then
  echo 0 > /home/linaro/restartflag
  /home/linaro/bitcoin-cli stop
  echo "Do not shut down the device until notified"
- $x=$(pgrep -f bitcoind)
- while [ "$x" !=  "" ]
+ t=0
+ m=300
+ x=$(pgrep -f bitcoind)
+ while [ "$x" !=  "" -a "$t" -lt "$m" ]
  do
   echo -n "."
   sleep 1s
+  t=t+1
   x=$(pgrep -f bitcoind)
  done
+ kill -9 "$x"
  echo "bitcoin has stopped. restart in 5 seconds"
  sleep 10s
  echo "starting bitcoind, pleese wait 15 min"
