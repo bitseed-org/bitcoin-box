@@ -1,6 +1,6 @@
 #deletes the current bitcoind and bitcoin-cli binray files
 #downloads XT 0.11b binaries and installs them
-echo "removing bitcoin core and installing XT ... starts in 10 sec"
+echo "removing older bitcoin and installing XT 0.11B ... starts in 10 sec"
 sleep 10s
 #get XT binary files from bitseed.org
 rm bitcoin-xt-0.11a.zip
