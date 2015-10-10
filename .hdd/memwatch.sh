@@ -8,5 +8,5 @@ if [ "$byt" > 200000000 ]; then
  echo 1 > $HOME/restartflag
  echo 0 > mempool
  else
- echo "not over 200M so do notheing" 
+ #echo "not over 200M so do notheing" 
 fi
