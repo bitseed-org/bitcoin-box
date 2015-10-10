@@ -44,4 +44,5 @@ sudo cp $HOME/bitcoind /usr/local/bin
 sudo cp $HOME/bitcoin-cli /usr/local/bin
 
 sudo chmod u+s /bin/ping
+sudo apt-get install jq
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
