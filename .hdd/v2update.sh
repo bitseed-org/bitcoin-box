@@ -12,6 +12,6 @@ if (( vers <200 )); then
  echo "1" > updateflag
  echo "v2update: flag set to 1 on $(date)" >> /home/linaro/cron.log
 else 
-echo "nothing done"
+echo "nothing done $(date)"
 echo "0" > /home/linaro/updateflag
 fi
