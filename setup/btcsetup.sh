@@ -9,21 +9,21 @@ sudo apt-get install -y bsdmainutils
 sudo apt-get install -y apache2 php5 curl
 
 #Berkeley db 4.8 for wallet
-#mkdir /home/linaro/deb
+mkdir /home/linaro/deb
 cd /home/linaro/deb
-#wget https://bittylicious.com/downloads/db4.8-util_4.8.30-11ubuntu1_armhf.deb
-#wget https://bittylicious.com/downloads/libdb4.8++_4.8.30-10precise1_armhf.deb
-#wget https://bittylicious.com/downloads/libdb4.8_4.8.30-11ubuntu1_armhf.deb
-#wget https://bittylicious.com/downloads/libdb4.8++-dev_4.8.30-10precise1_armhf.deb
-#wget https://bittylicious.com/downloads/libdb4.8-dev_4.8.30-11ubuntu1_armhf.deb
+wget https://bittylicious.com/downloads/db4.8-util_4.8.30-11ubuntu1_armhf.deb
+wget https://bittylicious.com/downloads/libdb4.8++_4.8.30-10precise1_armhf.deb
+wget https://bittylicious.com/downloads/libdb4.8_4.8.30-11ubuntu1_armhf.deb
+wget https://bittylicious.com/downloads/libdb4.8++-dev_4.8.30-10precise1_armhf.deb
+get https://bittylicious.com/downloads/libdb4.8-dev_4.8.30-11ubuntu1_armhf.deb
 
 
-#sudo dpkg -i db4.8-util_4.8.30-11ubuntu1_armhf.deb
-#sudo dpkg -i libdb4.8++_4.8.30-10precise1_armhf.deb
-#sudo dpkg -i libdb4.8_4.8.30-11ubuntu1_armhf.deb
-#sudo dpkg -i libdb4.8++-dev_4.8.30-10precise1_armhf.deb
-#sudo dpkg -i libdb4.8-dev_4.8.30-11ubuntu1_armhf.deb
-#sudo apt-get install -f
+sudo dpkg -i db4.8-util_4.8.30-11ubuntu1_armhf.deb
+sudo dpkg -i libdb4.8++_4.8.30-10precise1_armhf.deb
+sudo dpkg -i libdb4.8_4.8.30-11ubuntu1_armhf.deb
+sudo dpkg -i libdb4.8++-dev_4.8.30-10precise1_armhf.deb
+sudo dpkg -i libdb4.8-dev_4.8.30-11ubuntu1_armhf.deb
+sudo apt-get install -f
 cd ~
 
 #get binaries
@@ -35,10 +35,10 @@ cd ~
 #wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin.conf
 #wget http://www.bitseed.org/device/bitcoin0.10.0/bitcoin-qt
 
-chmod 755 bitcoind
-chmod 755 bitcoin-cli
-chmod 755 bitcoin-qt
-chmod 755 bitcoin-tx
+#chmod 755 bitcoind
+#chmod 755 bitcoin-cli
+#chmod 755 bitcoin-qt
+#chmod 755 bitcoin-tx
 
 #get scripts
 cd ~
