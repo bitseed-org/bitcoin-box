@@ -64,6 +64,7 @@ else
  echo "at block:"$b
  if [ "$b" -lt "300000" ]; then
    echo "oops! blockheight less than 300K - restoring from backup"
+   echo "blockheight less than 300K - restore from backup" >> $HOME/cron.log
    sh /home/linaro/btcstop.sh
    sleep 5s
    rm -rf /home/linaro/.bitcoin
