@@ -14,7 +14,7 @@
 
 #watch device free memory.  
 #restart bitcoind if less than 50MB free
-fm=$(free | grep Mem | awk '{print $4/$2 * 1000.0}' | bc)
+fm=$(free | grep Mem | awk '{print $4/$2 * 10000.0}' | bc)
 a=$(echo "$fm < 50" | bc)
 #fm=$(cat freemem)
 echo "$fm" >> cron.log
