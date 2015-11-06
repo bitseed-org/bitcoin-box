@@ -19,10 +19,10 @@ sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/"  >> /etc/tor/torrc
 sudo echo "HiddenServicePort 8333 127.0.0.1:8333 >> /etc/tor/torrc
 sudo service tor reload
 #get onion address
-sudo cat /var/lib/tor/bitcoin-service/hostname > tmp1
-echo tmp1
-onion=$(<tmp1)
-rm tmp1
+sudo cat /var/lib/tor/bitcoin-service/hostname > $HOME/tmp1
+echo $HOME/tmp1
+onion=$(<$HOME/tmp1)
+rm $HOME/tmp1
 
 # configure bitcoin.conf
 echo "#Tor Settings
@@ -40,4 +40,4 @@ echo "seednode=tsyvzsqwa2kkf6b2.onion" >> $HOME/.bitcoin/bitcoin.conf
 echo "banscore=10000" >> $HOME/.bitcoin/bitcoin.conf
 echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
 
-echo "1" > restartflag
+echo "1" > $HOME/restartflag
