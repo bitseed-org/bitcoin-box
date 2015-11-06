@@ -11,6 +11,8 @@ sudo apt-get update
 
 #install Tor - it will start automatically
 sudo apt-get install tor deb.torproject.org-keyring
+mkdir $HOME/.bitseed
+echo "onion=1" >> $HOME/.bitseed/bitseed.conf
 
 #Configure Tor to be a hidden service so that other Tor nodes can connect to your node
 sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/"  >> /etc/tor/torrc
