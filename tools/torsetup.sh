@@ -20,6 +20,7 @@ sudo service tor reload
 sudo cat /var/lib/tor/bitcoin-service/hostname > tmp1
 echo tmp1
 onion=$(<tmp1)
+rm tmp1
 
 # configure bitcoin.conf
 echo "#Tor Settings
