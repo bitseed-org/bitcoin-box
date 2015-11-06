@@ -1,24 +1,40 @@
-#
-#installs Tor and configures bitcoind to run as a Tor hidden service
+#Script to install Tor on Bitseed V2
 #run as sudo
 
-#Install Tor
-sudo rm /etc/apt/sources.list.d/tor.list
-sudo echo "deb http://deb.torproject.org/torproject.org trusty main"  >> /etc/apt/sources.list.d/tor.list
-sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main"  >> /etc/apt/sources.list.d/tor.list
+#add Tor repository sources
+sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> 
+/etc/apt/sources.list
+sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main  >> /etc/apt/sources.list
 gpg --keyserver keys.gnupg.net --recv 886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install -y tor deb.torproject.org-keyring
 
-#setup hidden service
-sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/" >> /etc/tor/torrc
-sudo echo "HiddenServicePort 8333 127.0.0.1:8333" >> /etc/tor/torrc
+#install Tor - it will start automatically
+sudo apt-get install tor deb.torproject.org-keyring
+
+#Configure Tor to be a hidden service so that other Tor nodes can connect to your node
+sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/"  >> /etc/tor/torrc
+sudo echo "HiddenServicePort 8333 127.0.0.1:8333 >> /etc/tor/torrc
 sudo service tor reload
-sleep 15s
 #get onion address
-sudo cat /var/lib/tor/bitcoin-service/hostname > oname
-onionname=$(cat oname)
-rm oname
-#out onion address into bitcoin.conf
-echo "externalip=$onionname" >> $HOME/.bitcoin/bitcoin.conf
+sudo cat /var/lib/tor/bitcoin-service/hostname > tmp1
+echo tmp1
+onion=$(<tmp1)
+
+# configure bitcoin.conf
+echo "#Tor Settings
+echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
+echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
+echo "listen=1" >> $HOME/.bitcoin/bitcoin.conf
+echo "bind=127.0.0.1:8333" >> $HOME/.bitcoin/bitcoin.conf
+echo "externalip=$onion"  >> $HOME/.bitcoin/bitcoin.conf
+
+#these are other Tor nodes that will help your node find peers
+echo "seednode=nkf5e6b7pl4jfd4a.onion" >> $HOME/.bitcoin/bitcoin.conf
+echo "seednode=xqzfakpeuvrobvpj.onion" >> $HOME/.bitcoin/bitcoin.conf
+echo "seednode=tsyvzsqwa2kkf6b2.onion" >> $HOME/.bitcoin/bitcoin.conf
+#these lines help limit potential DOS attacks over Tor
+echo "banscore=10000" >> $HOME/.bitcoin/bitcoin.conf
+echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
+
+echo "1" > restartflag
