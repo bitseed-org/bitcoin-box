@@ -2,8 +2,7 @@
 #run as sudo
 
 #add Tor repository sources
-sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> 
-/etc/apt/sources.list
+sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
 sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main  >> /etc/apt/sources.list
 gpg --keyserver keys.gnupg.net --recv 886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
@@ -25,6 +24,7 @@ onion=$(<$HOME/tmp1)
 rm $HOME/tmp1
 
 # configure bitcoin.conf
+sh /home/linaro/btcstop.sh
 echo "#Tor Settings
 echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
 echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
@@ -40,4 +40,5 @@ echo "seednode=tsyvzsqwa2kkf6b2.onion" >> $HOME/.bitcoin/bitcoin.conf
 echo "banscore=10000" >> $HOME/.bitcoin/bitcoin.conf
 echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
 
-echo "1" > $HOME/restartflag
+sh /home/linaro/btcstart.sh
+#echo "1" > $HOME/restartflag
