@@ -6,7 +6,16 @@ btcsetup.sh installs all bitcoin dependecies
 
 setup scripts need to be run as sudo
 
+    #starting from fresh linaro ubuntu 14
+    sudo ./gitclone.sh
     cd ~/bitcoin-box
     sudo ./devicesetup.sh
     sudo ./btcsetup.sh
     sudo ./crontabsetup.sh
+
+    #sd image file starts at this point
+    sudo ./gitclone.sh
+    cd ~/bitcoin-box/setup
+    sudo ./quickset.sh
+    sudo reboot
+    
