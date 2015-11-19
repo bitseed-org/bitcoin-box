@@ -1,6 +1,8 @@
 
 #removes Tor onion settings from bitcoin.conf
 #restores bitcoin.conf to standard config
+$HOME/btcstop.sh
+echo "remove Tor settings from bitcoin.conf"
 
 sed -i '/onlynet=Tor/d' $HOME/.bitcoin/bitcoin.conf
 sed -i '/onion=127.0.0.1:9050/d' $HOME/.bitcoin/bitcoin.conf
