@@ -17,4 +17,4 @@ sed -i '/seednode=tsyvzsqwa2kkf6b2.onion/d' $HOME/.bitcoin/bitcoin.conf
 sed -i '/banscore=10000/d' $HOME/.bitcoin/bitcoin.conf
 sed -i '/bantime=11/d' $HOME/.bitcoin/bitcoin.conf
 
-echo "1" > restartflag
+echo "1" > $HOME/restartflag
