@@ -42,3 +42,4 @@ echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
 
 #sh /home/linaro/btcstart.sh
 echo "1" > $HOME/restartflag
+echo "Tor will now run automatically and publish the bitcoin node as a hidden service"
