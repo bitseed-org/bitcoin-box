@@ -6,7 +6,7 @@ if [ "$status" == "onlynet=Tor" ]; then
   echo "stop using Tor? y/n"
   read a
   if [ "$a" == "y" ]; then
-    echo "dsiable script will run"
+    echo "disable script will run"
 
     #removes Tor onion settings from bitcoin.conf
     #restores bitcoin.conf to standard config
@@ -56,7 +56,7 @@ if [ "$status" == "onlynet=Tor" ]; then
       echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
       #sh /home/linaro/btcstart.sh
       echo "1" > $HOME/restartflag
-      echo "Tor will now run automatically and publish the bitcoin node as a hidden service"
+      echo "Tor will now run automatically and publish the Bitcoin node as a hidden service"
       echo "Bitcoin will only connect to peers over the Tor Onion network."
       fi
     fi 
