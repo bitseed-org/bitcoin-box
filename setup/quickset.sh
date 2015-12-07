@@ -40,8 +40,8 @@ sudo swapon  /home/swapfile
 
 echo "201" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
-sudo cp $HOME/bitcoind /usr/local/bin
-sudo cp $HOME/bitcoin-cli /usr/local/bin
+#sudo cp $HOME/bitcoind /usr/local/bin
+#sudo cp $HOME/bitcoin-cli /usr/local/bin
 
 sudo chmod u+s /bin/ping
 sudo apt-get install jq
