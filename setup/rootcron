@@ -1,2 +1,3 @@
 * * * * * bash /root/safestop.sh
 * * * * * bash /home/linaro/v2update.sh
+30 * * * * bash /root/checktime.sh
