@@ -8,8 +8,8 @@ cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
 sudo chown -R linaro:linaro /home/linaro
 chmod 755 /home/linaro/*.sh
 chmod 755 /home/linaro/bitcoin-box/setup/*sh
-chmod 755 #HOME/bitcoind
-chmod 755 #HOME/bitcoin-cli
+chmod 755 /home/linaro/bitcoind
+chmod 755 /home/linaro/bitcoin-cli
 sudo cp /home/linaro/bitcoin-box/.hdd/safestop.sh /root
 
 #install php GUI
