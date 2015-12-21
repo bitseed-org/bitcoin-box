@@ -25,7 +25,7 @@ rm $HOME/tmp1
 
 # configure bitcoin.conf
 sh /home/linaro/btcstop.sh
-echo "#Tor Settings
+#Tor Settings
 echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
 echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
 echo "listen=1" >> $HOME/.bitcoin/bitcoin.conf
