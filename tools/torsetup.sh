@@ -1,3 +1,4 @@
+#!/bin/bash
 #Script to install Tor on Bitseed V2
 #run as sudo
 
