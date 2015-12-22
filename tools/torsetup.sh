@@ -14,7 +14,7 @@ mkdir $HOME/.bitseed
 echo "onion=1" >> $HOME/.bitseed/bitseed.conf
 
 #Configure Tor to be a hidden service so that other Tor nodes can connect to your node
-sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/"  >> /etc/tor/torrc
+sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/" >> /etc/tor/torrc
 sudo echo "HiddenServicePort 8333 127.0.0.1:8333" >> /etc/tor/torrc
 sudo service tor reload
 #get onion address
@@ -30,7 +30,7 @@ echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
 echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
 echo "listen=1" >> $HOME/.bitcoin/bitcoin.conf
 echo "bind=127.0.0.1:8333" >> $HOME/.bitcoin/bitcoin.conf
-echo "externalip=$onion"  >> $HOME/.bitcoin/bitcoin.conf
+echo "externalip=$onion" >> $HOME/.bitcoin/bitcoin.conf
 
 #these are other Tor nodes that will help your node find peers
 echo "seednode=nkf5e6b7pl4jfd4a.onion" >> $HOME/.bitcoin/bitcoin.conf
