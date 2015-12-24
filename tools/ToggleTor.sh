@@ -11,6 +11,7 @@ if [ "$status"=="onlynet=Tor" ]; then
     #removes Tor onion settings from bitcoin.conf
     #restores bitcoin.conf to standard config
     $HOME/btcstop.sh
+    sleep 5s
     echo "removing Tor settings from bitcoin.conf"
 
     sed -i '/onlynet=Tor/d' $HOME/.bitcoin/bitcoin.conf
