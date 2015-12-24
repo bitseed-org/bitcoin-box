@@ -18,6 +18,7 @@ echo "onion=1" >> $HOME/.bitseed/bitseed.conf
 sudo echo "HiddenServiceDir /var/lib/tor/bitcoin-service/" >> /etc/tor/torrc
 sudo echo "HiddenServicePort 8333 127.0.0.1:8333" >> /etc/tor/torrc
 sudo service tor reload
+sleep 10s
 #get onion address
 sudo cat /var/lib/tor/bitcoin-service/hostname > $HOME/tmp1
 echo $HOME/tmp1
