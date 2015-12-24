@@ -1,11 +1,11 @@
 #switch bitcoind between Tor and default ip4
 status=$(sed -n '/onlynet=Tor/p' $HOME/.bitcoin/bitcoin.conf)
-if [ "$status" == "onlynet=Tor" ]; then 
+if [ "$status"=="onlynet=Tor" ]; then 
   echo "tor enabled"
   echo "bitcoin is set to use Tor"
   echo "stop using Tor? y/n"
   read a
-  if [ "$a" == "y" ]; then
+  if [ "$a"=="y" ]; then
     echo "dsiable script will run"
 
     #removes Tor onion settings from bitcoin.conf
@@ -32,11 +32,11 @@ if [ "$status" == "onlynet=Tor" ]; then
     exit 
   fi
   else
-  if [ "$status" != "onlynet=Tor" ]; then 
+  if [ "$status"!="onlynet=Tor" ]; then 
     echo "Bitcoin not using Tor"
     echo "Switch to Tor? y/n"
     read a
-    if [ "$a" == "y" ]; then
+    if [ "$a"=="y" ]; then
       echo "enable script will run"
 
       # configure bitcoin.conf
