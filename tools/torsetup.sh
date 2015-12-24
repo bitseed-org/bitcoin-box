@@ -10,7 +10,7 @@ gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 sudo apt-get update
 
 #install Tor - it will start automatically
-sudo apt-get install tor deb.torproject.org-keyring
+sudo apt-get install -y tor deb.torproject.org-keyring
 mkdir $HOME/.bitseed
 echo "onion=1" >> $HOME/.bitseed/bitseed.conf
 
