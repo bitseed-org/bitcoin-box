@@ -24,6 +24,7 @@ if [ "$status"=="onlynet=Tor" ]; then
     sed -i '/seednode=.*/d' $HOME/.bitcoin/bitcoin.conf
     sed -i '/seednode=xqzfakpeuvrobvpj.onion/d' $HOME/.bitcoin/bitcoin.conf
     sed -i '/seednode=tsyvzsqwa2kkf6b2.onion/d' $HOME/.bitcoin/bitcoin.conf
+    sed -i '/seednode=gcvqzacplu4veul4.onion/d'  $HOME/.bitcoin/bitcoin.conf
     sed -i '/banscore=10000/d' $HOME/.bitcoin/bitcoin.conf
     sed -i '/bantime=11/d' $HOME/.bitcoin/bitcoin.conf
 
