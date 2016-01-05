@@ -39,7 +39,7 @@ if [ "$status"=="onlynet=Tor" ]; then
     read a
     if [ "$a"=="y" ]; then
       echo "enable script will run"
-
+      onion=$(<$HOME/onionaddr)
       # configure bitcoin.conf
       sh /home/linaro/btcstop.sh
       echo #Tor Settings
