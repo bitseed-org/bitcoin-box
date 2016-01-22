@@ -19,6 +19,7 @@ d=$(date +%s)
 echo "$d"
 if [ "$d" -lt "1422748800" ]; then
   echo "system date is incorrect, aborted startup" >> /home/linaro/cron.log
+  echo 3 > /home/linaro/restartflag
   exit 0
 fi
 echo "system date is > 2015-02-01, script will continue"
