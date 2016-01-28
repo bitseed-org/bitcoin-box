@@ -21,12 +21,12 @@ intip=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*)
 echo "$intip"
 echo ""
 #curl -H 'Accept: application/json; indent=4' -d 'bitcoin_address=14A7JMpQMKPUD3zvefovijodfivuSeW6' -d 'url=http://23.456.78.9' https://getaddr.bitnodes.io/api/v1/nodes/23.456.78.9-8333/
-curl -H "Accept: application/json; indent=4" -d "bitcoin_address=$btcadr" -d "url=http://$ipadr:$prt" https://getaddr.bitnodes.io/api/v1/nodes/$urlnodes/
+curl -H "Accept: application/json; indent=4" -d "bitcoin_address=$btcadr" -d "url=http://$ipadr:$prt" https://bitnodes.21.co/api/v1/nodes/$urlnodes/
 #echo ""
 rm plain
 #bitnodes requires use of a restricted port <1024.  upnp will not work on ports <1024 for most routers
 #intip=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
 #echo "$intip"
 #upnpc -a $intip 80 $prt TCP
-echo "bitnodes registration sent.  If successful, the bitnodes status in the GUI will show as "verified" within about 5-10 minutyes"
+echo "bitnodes registration sent.  If successful, the bitnodes status in the GUI will show as "verified" within about 5-10 minutes"
 
