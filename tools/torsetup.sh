@@ -27,7 +27,7 @@ onion=$(<$HOME/onionaddr)
 # configure bitcoin.conf
 sh /home/linaro/btcstop.sh
 #Tor Settings
-echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
+echo "onlynet=onion" >> $HOME/.bitcoin/bitcoin.conf
 echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
 echo "listen=1" >> $HOME/.bitcoin/bitcoin.conf
 echo "bind=127.0.0.1:8333" >> $HOME/.bitcoin/bitcoin.conf
