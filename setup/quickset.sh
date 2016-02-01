@@ -55,5 +55,5 @@ sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
 sudo echo "HiddenServicePort 82 127.0.0.1:80" >> /etc/tor/torrc
 sudo service tor restart
 sleep 5
-
+sudo cat /var/lib/tor/bitcoin-service/hostname
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
