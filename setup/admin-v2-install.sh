@@ -8,6 +8,7 @@ sudo mkdir /var/www/public
 sudo mkdir /var/www/onion
 sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/public
 sudo cp BitcoinNodeAdmin/public/index.php /var/www/public/
+sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/onion
 sudo cp BitcoinNodeAdmin/public/onion/index.php /var/www/onion/
 sudo chown -R www-data:www-data /var/www/html
 sudo chown -R www-data:www-data /var/www/public
