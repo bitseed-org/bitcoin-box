@@ -23,7 +23,9 @@ echo "Enter device serial number:"
 read serial
 echo $serial > /home/linaro/"deviceid-$serial"
 echo $serial > /var/www/html/serial
+echo $serial > /var/www/onion/serial
 sudo chown www-data:www-data /var/www/html/serial
+sudo chown www-data:www-data /var/www/onion/serial
 
 #disable screensaver becuase it uses too much CPU
 sudo mv /etc/init/lxdm.conf /etc/init/lxdm.conf.nostart
