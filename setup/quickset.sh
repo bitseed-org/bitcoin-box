@@ -49,5 +49,7 @@ sudo chown linaro:linaro /home/linaro/checkupdates.sh
 
 sudo chmod u+s /bin/ping
 sudo apt-get install -y ntp
+sudo apt-get install -y tor
 sudo apt-get -y autoremove
+
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
