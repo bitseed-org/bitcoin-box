@@ -51,5 +51,9 @@ sudo chmod u+s /bin/ping
 sudo apt-get install -y ntp
 sudo apt-get install -y tor
 sudo apt-get -y autoremove
+sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
+sudo echo "HiddenServicePort 82 127.0.0.1:80" >> /etc/tor/torrc
+sudo service tor restart
+sleep 5
 
 echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
