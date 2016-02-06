@@ -2,7 +2,7 @@
 #installs admin panel into /var/www/html
 #sudo apt-get install -y php5 php5-curl
 sudo rm -rf BitcoinNodeAdmin
-sudo rm -rf BitcoinNodeAdmin
+sudo rm -rf UI_konn.zip
 #git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
 wget https://github.com/bitseed-org/BitcoinNodeAdmin/archive/UI_konn.zip
 unzip UI_konn.zip
@@ -27,10 +27,13 @@ sudo chown www-data:www-data /var/www/html/*.txt
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
 sudo cp /home/linaro/bitcoin-box/.hdd/bconf /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
+sudo chmod 755 /home/linaro/*.py
 sudo chmod 666 /home/linaro/bconf
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag /home/linaro
 sudo chmod 666 /home/linaro/updateflag
-sudo echo "200" > /home/linaro/version
+sudo echo "202" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
 
