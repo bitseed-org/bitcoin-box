@@ -2,7 +2,13 @@
 #installs admin panel into /var/www/html
 #sudo apt-get install -y php5 php5-curl
 sudo rm -rf BitcoinNodeAdmin
-git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
+sudo rm -rf BitcoinNodeAdmin
+#git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
+wget https://github.com/bitseed-org/BitcoinNodeAdmin/archive/UI_konn.zip
+unzip UI_konn.zip
+#rename BitcoinNodeAdmin-UI_konn
+mv BitcoinNodeAdmin-UI_konn BitcoinNodeAdmin
+
 sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/html
 sudo mkdir /var/www/public
 sudo mkdir /var/www/onion
