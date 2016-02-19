@@ -19,5 +19,5 @@ Now we should remove the staging PPS so it doesn't pull down any unstable update
 
 sudo sed -i '/ubuntu-security-proposed/d' /etc/apt/sources.list
 
-sudo apt get update
+sudo apt-get update
 echo "patch complete"
