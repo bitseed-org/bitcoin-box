@@ -1,4 +1,4 @@
-#upgrades the OS to fix glibc vulnerability of 2/16
+#upgrades the OS to fix glibc dns vulnerability of 2/2016
 #run as sudo
  
 sudo echo "deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main" >> /etc/apt/sources.list
@@ -17,12 +17,5 @@ Now we should remove the staging PPS so it doesn't pull down any unstable update
 sed -i 'deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main' /etc/apt/sources.list
 sed -i 'deb-src http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main' /etc/apt/sources.list
 
-
-sudo nano /etc/apt/sources.list
- 
-#deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main 
-#deb-src http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main 
-
-ctrl X enter
-
 sudo apt get update
+echo "patch complete"
