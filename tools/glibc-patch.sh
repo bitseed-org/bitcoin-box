@@ -14,6 +14,10 @@ sudo dpkg -l  libc-dev-bin libc6 libc6-armel libc6-dev
 
 Now we should remove the staging PPS so it doesn't pull down any unstable updates
 
+sed -i 'deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main' /etc/apt/sources.list
+sed -i 'deb-src http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main' /etc/apt/sources.list
+
+
 sudo nano /etc/apt/sources.list
  
 #deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main 
