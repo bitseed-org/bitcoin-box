@@ -14,6 +14,8 @@ sudo apt-get update
 
 sudo apt-get install -y libc-dev-bin libc6 libc6-armel libc6-dev
 
+sudo apt-get update
+
 sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
 
 #it should show version 2.19-0ubuntu6.7
@@ -22,5 +24,4 @@ sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
 
 #sudo sed -i '/ubuntu-security-proposed/d' /etc/apt/sources.list
 
-sudo apt-get update
 echo "patch complete"
