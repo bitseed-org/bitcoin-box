@@ -1,8 +1,8 @@
 #upgrades the OS to fix glibc dns vulnerability of 2/2016
 #run as sudo
 
-sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security" >> /etc/apt/sources.list
-sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security" >> /etc/apt/sources.list
+sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
+sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
  
 #sudo echo "deb http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main" >> /etc/apt/sources.list
 #sudo echo "deb-src http://ppa.launchpad.net/ubuntu-security-proposed/ppa/ubuntu trusty main" >> /etc/apt/sources.list
