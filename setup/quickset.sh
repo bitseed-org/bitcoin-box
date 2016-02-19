@@ -48,8 +48,8 @@ sudo chown linaro:linaro /home/linaro/checkupdates.sh
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
 
 
-sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security" >> /etc/apt/sources.list
-sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security" >> /etc/apt/sources.list
+sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
+sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ADCE2AF3A4E0014F
 sudo sed -i '/wiimu/d' /etc/apt/sources.list
 sudo apt-get update
