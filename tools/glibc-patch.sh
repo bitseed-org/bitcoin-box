@@ -9,7 +9,7 @@ sudo sed -i '/wiimu/d' /etc/apt/sources.list
 
 sudo apt-get update
 
-sudo apt-get install libc-dev-bin libc6 libc6-armel libc6-dev
+sudo apt-get install -y libc-dev-bin libc6 libc6-armel libc6-dev
 
 sudo dpkg -l  libc-dev-bin libc6 libc6-armel libc6-dev
 
