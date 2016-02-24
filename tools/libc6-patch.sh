@@ -9,5 +9,4 @@ sudo apt-get install -y libc-dev-bin libc6 libc6-armel libc6-dev
 sleep 5
 sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin >> /home/linaro/bitcoin-box/setup/setup.log
 sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
-sudo apt-get install -y libevent-dev
 echo "glibc (libc6) patch completed.  reboot is recommended"
