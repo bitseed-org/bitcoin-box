@@ -48,6 +48,11 @@ sudo chown linaro:linaro /home/linaro/checkupdates.sh
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
 gpg --import bitseed-jay.pub
 
+#Tor respository to get latest version
+echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 74A941BA219EC810
+
 #security patch
 #sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
 #sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
@@ -66,8 +71,8 @@ sudo apt-get install -y tor
 sudo apt-get -y autoremove
 sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
 sudo echo "HiddenServicePort 80 127.0.0.1:82" >> /etc/tor/torrc
-sudo echo "ControlPort 9051" >> /etc/tor/torrc
-sudo echo "CookieAuthentication 1" >> /etc/tor/torrc
+#sudo echo "ControlPort 9051" >> /etc/tor/torrc
+#sudo echo "CookieAuthentication 1" >> /etc/tor/torrc
 sudo service tor restart
 sleep 5
 sudo cat /var/lib/tor/bitseed-service/hostname
