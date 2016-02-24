@@ -20,8 +20,4 @@ sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
 
 #it should show version 2.19-0ubuntu6.7
 
-#Now we should remove the staging PPS so it doesnt pull down any unstable updates
-
-#sudo sed -i '/ubuntu-security-proposed/d' /etc/apt/sources.list
-
 echo "patch complete"
