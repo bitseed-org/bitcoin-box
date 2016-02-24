@@ -66,6 +66,8 @@ sudo apt-get install -y tor
 sudo apt-get -y autoremove
 sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
 sudo echo "HiddenServicePort 80 127.0.0.1:82" >> /etc/tor/torrc
+sudo echo "ControlPort 9051" >> /etc/tor/torrc
+sudo echo "CookieAuthentication 1" >> /etc/tor/torrc
 sudo service tor restart
 sleep 5
 sudo cat /var/lib/tor/bitseed-service/hostname
