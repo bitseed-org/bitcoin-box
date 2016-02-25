@@ -49,8 +49,8 @@ sudo chown linaro:linaro /home/linaro/checkupdates.sh
 gpg --import bitseed-jay.pub
 
 #Tor respository to get latest version
-echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
-echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 74A941BA219EC810
 sudo apt-get update
 
