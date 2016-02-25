@@ -52,7 +52,7 @@ gpg --import bitseed-jay.pub
 sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
 sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 74A941BA219EC810
-sudo apt-get update
+#sudo apt-get update
 
 #security patch
 sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
