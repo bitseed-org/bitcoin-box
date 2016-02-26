@@ -68,6 +68,7 @@ sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
 
 sudo chmod u+s /bin/ping
 sudo apt-get install -y ntp
+sudo apt-get install libevent-dev
 sudo apt-get install -y tor
 sudo apt-get -y autoremove
 sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
