@@ -28,11 +28,11 @@ sudo chown www-data:www-data /var/www/html/serial
 sudo chown www-data:www-data /var/www/onion/serial
 
 #disable screensaver becuase it uses too much CPU
-sudo mv /etc/init/lxdm.conf /etc/init/lxdm.conf.nostart
-rm /home/linaro/.config/lxsession/LXDE/autostart
-echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
-echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
+#sudo mv /etc/init/lxdm.conf /etc/init/lxdm.conf.nostart
+#rm /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@lxpanel --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@pcmanfm --desktop --profile LXDE" >> /home/linaro/.config/lxsession/LXDE/autostart
+#echo "@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" >> /home/linaro/.config/lxsession/LXDE/autostart
 
 #dd line below not needed if hdd is pre-imaged with swapfile
 echo "setting up swap"
@@ -49,26 +49,26 @@ sudo chown linaro:linaro /home/linaro/checkupdates.sh
 gpg --import bitseed-jay.pub
 
 #Tor respository to get latest version
-sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
-sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 74A941BA219EC810
+#sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+#sudo echo "deb-src http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
+#sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 74A941BA219EC810
 #sudo apt-get update
 
 #security patch
-sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
-sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ADCE2AF3A4E0014F
-sudo sed -i '/wiimu/d' /etc/apt/sources.list
-sudo apt-get update
-sudo apt-get install -y libc-dev-bin libc6 libc6-armel libc6-dev
-sleep 5
-sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin >> /home/linaro/bitcoin-box/setup/setup.log
-sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
+#sudo echo "deb http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
+#sudo echo "deb-src http://ports.ubuntu.com/ubuntu-ports/ trusty-security main universe" >> /etc/apt/sources.list
+#sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ADCE2AF3A4E0014F
+#sudo sed -i '/wiimu/d' /etc/apt/sources.list
+#sudo apt-get update
+#sudo apt-get install -y libc-dev-bin libc6 libc6-armel libc6-dev
+#sleep 5
+#sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin >> /home/linaro/bitcoin-box/setup/setup.log
+#sudo dpkg -l libc6 libc6-dev libc6-armel libc-dev-bin
 
 
 sudo chmod u+s /bin/ping
-sudo apt-get install -y ntp
-sudo apt-get install -y libevent-dev
+#sudo apt-get install -y ntp
+#sudo apt-get install -y libevent-dev
 sudo apt-get install -y tor
 sudo apt-get -y autoremove
 sudo echo "HiddenServiceDir /var/lib/tor/bitseed-service/" >> /etc/tor/torrc
