@@ -46,7 +46,7 @@ echo "202" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
 #sudo cp $HOME/bitcoind /usr/local/bin
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
-gpg --import bitseed-jay.pub
+gpg --import $HOME/bitcoin-box/.hdd/bitseed-jay.pub
 
 #Tor respository to get latest version
 #sudo echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
