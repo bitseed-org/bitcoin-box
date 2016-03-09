@@ -15,7 +15,7 @@ rsflag=$( < $HOME/restartflag)
 if (( rsflag == 2 )); then
  echo "stopiing $coind, please wait"
 echo 0 > $HOME/restartflag
-$coincli stop
+./$coincli stop
 echo "Do not shut down the device until notified"
 $x=$(pgrep -f $coind)
 while [ "$x" !=  "" ]
