@@ -8,7 +8,7 @@ coind="$coin""d"
 coindir=".""$coin"
 coinconf="$coin"".conf"
 
-$coincli stop
+./$coincli stop
 
 echo "Do not shut down the device until notified"
 x=$(pgrep -f $coind)
