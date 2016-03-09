@@ -32,19 +32,19 @@ if [ "$d" -lt "1422748800" ]; then
 fi
 echo "system date is > 2015-02-01, script will continue"
 
-#check if bitcoind is already running
+#check if $coind is already running
 x=$(pgrep -f $coind)
 echo "x:$x"
 if [ "$x" == "" ]; then
   #if bitcoind not running then start it
   echo "start $coin"
-  $coind -daemon
+  ./$coind -daemon
   echo "wait 10 min and check if running"
   sleep 10m
   x=$(pgrep -f $coind)
   echo "PID:"$x
   if [ "$x" == "" ]; then
-    #if bitcoind did not start properly, restore .bitcoin directory from local backup
+    #if $coind did not start properly, restore .bitcoin directory from local backup
     echo "start failed, restoring from backup $(date)" >> /home/linaro/cron.log
     echo "start failed, * restoring from backup * will resatrt in about 1hr"
     rm -rf $HOME/$coindir
@@ -53,7 +53,7 @@ if [ "$x" == "" ]; then
     rsync --checksum -r --info=progress2 $HOME/livebak/ $HOME
     sleep 1m
     echo "start $coin after restore due to fail to run"
-    $coind -daemon
+    ./$coind -daemon
     exit
   else
     echo "restart success"
@@ -82,6 +82,6 @@ else
    rsync --checksum -r --info=progress2 $HOME/livebak/ $HOME
    sleep 5s
    echo "start $coin after restore due to low block count"
-   $coind -daemon
+   ./$coind -daemon
  fi
 fi
