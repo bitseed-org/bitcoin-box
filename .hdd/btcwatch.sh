@@ -4,14 +4,14 @@
 
 #get public IP and write to disk
 dig +short myip.opendns.com @resolver1.opendns.com > extip
-
-#check if rsync in pregress"
+disable=$(awk -F ' *= *' '$1=="disablebackups"{print $2}' $HOME/.bitseed/bitseed.conf)
+#check if rsync in progress"
 z=$(pgrep -f rsync)
 if [ "$z" != "" ]; then 
-echo "rsync running - dont start btc"
-exit
+   echo "rsync running - dont start btc"
+   exit
 else
-echo "rync not running - ok"
+   echo "rync not running - ok"
 fi
 
 #check system date
@@ -34,7 +34,7 @@ if [ "$x" == "" ]; then
   sleep 15m
   x=$(pgrep -f bitcoind)
   echo "PID:"$x
-  if [ "$x" == "" ]; then
+  if [ "$x" == "" ] && [ "$disable" != 1 ] ; then
     #if bitcoind did not start properly, restore .bitcoin directory from local backup
     echo "start failed, restoring from backup $(date)" >> /home/linaro/cron.log
     echo "start failed, * restoring from backup * will resatrt in about 1hr"
@@ -63,7 +63,7 @@ else
  rm locblock
  #check of local blockchain is way out of date, if so, restore from backup
  echo "at block:"$b
- if [ "$b" -lt "300000" ]; then
+ if [ "$b" -lt "300000" ] && [ "$disable" != 1 ] ; then
    echo "oops! blockheight less than 300K - restoring from backup"
    echo "blockheight less than 300K - restore from backup" >> $HOME/cron.log
    sh /home/linaro/btcstop.sh
