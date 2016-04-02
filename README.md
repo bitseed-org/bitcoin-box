@@ -1,5 +1,5 @@
 # bitcoin-box
-A low cost Bitcoin node device
+A turn-key Bitcoin full node device
 
 The Bitseed Personal Server - Bitcoin Core
 ----------------
