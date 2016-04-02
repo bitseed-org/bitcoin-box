@@ -27,13 +27,17 @@ sudo chown www-data:www-data /var/www/html/*.txt
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
 sudo cp /home/linaro/bitcoin-box/.hdd/bconf /home/linaro
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
+#sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
+#sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
+sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
+sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
 sudo chmod 755 /home/linaro/*.py
 sudo chmod 666 /home/linaro/bconf
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag /home/linaro
 sudo chmod 666 /home/linaro/updateflag
-sudo echo "202" > /home/linaro/version
+sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
+sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
+sudo echo "203" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
 
