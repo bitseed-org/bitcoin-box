@@ -1,5 +1,5 @@
 # bitcoin-box
-A turn-key Bitcoin full node device
+A turnkey Bitcoin full node device
 
 The Bitseed Personal Server - Bitcoin Core
 ----------------
