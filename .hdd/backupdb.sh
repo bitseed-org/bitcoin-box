@@ -1,8 +1,13 @@
 #!/bin/bash
+#stop bitcoind and update blockchain backup
+#check if backups are disabled
+disable=$(awk -F ' *= *' '$1=="disablebackups"{print $2}' $HOME/.bitseed/bitseed.conf)
+if (( $disable != 1 )); then
+#check that bitcoin is running
 x=$(pgrep -f bitcoind)
 if [ "$x" == "" ]; then 
   echo "btc not running"
-  echo "btc not running $(date)" >> bak.log 
+  echo "btc not running $(date)" >> $HOME/bak.log 
 else
   echo "stop bitcoind to run backup"  
   sh /home/linaro/btcstop.sh
