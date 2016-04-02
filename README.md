@@ -1,7 +1,7 @@
-# Bitseed Core Full Node
+# Bitseed Full Node
 A turnkey Bitcoin full node device
 
-The Bitseed Personal Server - Bitcoin Core
+The Bitseed Bitcoin Core Full Node
 ----------------
 
 The [Bitseed Personal Server](https://bitseed.org/shop/) is a small and inexpensive device that is dedicated to running [Bitcoin Core](https://github.com/bitcoin/bitcoin) (the Satoshi client.) It is a small server that runs a full bitcoin node, which stores and validates the complete blockchain, and transmits transactions across the bitcoin network. The Bitseed Personal Server is not a Bitcoin miner, thus it does not earn bitcoin, but as a full node it provides an [essential service](https://medium.com/@lopp/bitcoin-nodes-how-many-is-enough-9b8e8f6fd2cf) to the network.
