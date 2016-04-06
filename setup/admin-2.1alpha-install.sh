@@ -45,6 +45,7 @@ sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_launch.py $HOME
 sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_launch.py $HOME
 mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
+chmod 666 $HOME/rd_bconf_flag
 sudo echo "203" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
