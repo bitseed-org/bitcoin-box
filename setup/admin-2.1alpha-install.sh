@@ -43,6 +43,8 @@ sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_cron.sh $HOME
 sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_cron.sh $HOME
 sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_launch.py $HOME
 sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_launch.py $HOME
+mkdir $HOME/.bitseed
+sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
 sudo echo "203" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
