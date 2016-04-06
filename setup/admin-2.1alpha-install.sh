@@ -38,6 +38,8 @@ sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/ui_init.sh $HOME
+sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_cron.sh $HOME
+sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_cron.sh $HOME
 sudo echo "203" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
