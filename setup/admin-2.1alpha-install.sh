@@ -26,24 +26,25 @@ sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
 sudo chown www-data:www-data /var/www/html/*.txt
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
-sudo cp /home/linaro/bitcoin-box/.hdd/bconf /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
 sudo chmod 755 /home/linaro/*.py
 sudo chmod 666 /home/linaro/bconf
-sudo cp /home/linaro/bitcoin-box/.hdd/updateflag /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
+sudo cp /home/linaro/bitcoin-box/.hdd/ui_init.sh $HOME
 sudo echo "203" > /home/linaro/version
 
 sudo /etc/init.d/apache2 restart
 
 #echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
 echo "replace this line with your bitcoin address" > /home/linaro/reward-addr
-sudo cp /home/linaro/bitcoin-box/.hdd/checkupdates.sh /home/linaro
+sudo cp /home/linaro/bitcoin-box/.hdd/checkupdates.sh $HOME
 sudo chown 755 /home/linaro/checkupdates.sh
 sudo apt-get install -y dnsutils
 
