@@ -16,14 +16,13 @@ sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/public
 sudo cp BitcoinNodeAdmin/public/index.php /var/www/public/
 sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/onion
 sudo cp BitcoinNodeAdmin/public/onion/index.php /var/www/onion/
-sudo chown -R www-data:www-data /var/www/html
-sudo chown -R www-data:www-data /var/www/public
-sudo chown -R www-data:www-data /var/www/onion
+sudo chown -R www-data:www-data /var/www
 sudo chmod 666 /home/linaro/restartflag
+#Apache config
 sudo cp BitcoinNodeAdmin/public/000-default.conf  /etc/apache2/sites-enabled/
 sudo cp BitcoinNodeAdmin/public/ports.conf  /etc/apache2/
 sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
-sudo chown www-data:www-data /var/www/html/*.txt
+
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
 sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
@@ -39,7 +38,6 @@ sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
-sudo cp /home/linaro/bitcoin-box/.hdd/ui_init.sh $HOME
 
 mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
