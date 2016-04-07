@@ -29,8 +29,9 @@ sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
 sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
-sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
-sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
+sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
+#sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
+#sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
 sudo chmod 755 $HOME/*.py
 sudo chmod 755 $HOME/*.sh
 sudo chmod 666 /home/linaro/bconf
@@ -39,10 +40,7 @@ sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/ui_init.sh $HOME
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_cron.sh $HOME
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_cron.sh $HOME
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_launch.py $HOME
-sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_launch.py $HOME
+
 mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
 chmod 666 $HOME/rd_bconf_flag
