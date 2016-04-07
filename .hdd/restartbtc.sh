@@ -9,7 +9,8 @@ rsflag=$( < /home/linaro/restartflag)
 if (( rsflag == 4 )); then
   echo "power-up sequence, please wait"
   echo 0 > /home/linaro/restartflag
-  sleep 2m
+  sleep 1m
+  ./ui_init.sh
   ./btcwatch.sh
  else
  if (( rsflag == 1 )); then
