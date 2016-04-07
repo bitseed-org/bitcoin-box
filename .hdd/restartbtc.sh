@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #stops and starts bitcoind when restartflag file is set to 1
 #does nothing in all other cases
