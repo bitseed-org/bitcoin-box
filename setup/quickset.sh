@@ -17,7 +17,8 @@ sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
 #install php GUI
 #public UI on port 80
 #private coontrols on port 81
-sudo ./admin-v2-install.sh
+#sudo ./admin-v2-install.sh
+sudo ./admin-2.1alpha-install.sh
 sudo chmod 666 /home/linaro/restartflag
 
 #set serial number
@@ -44,7 +45,7 @@ sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
-echo "202" > /home/linaro/version
+echo "210" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
 #sudo cp $HOME/bitcoind /usr/local/bin
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
