@@ -13,6 +13,7 @@ chmod 755 /home/linaro/bitcoin-cli
 sudo cp /home/linaro/bitcoin-box/.hdd/safestop.sh /root
 sudo mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
+sudo echo "bitcoin" > $HOME/.bitseed/coin
 
 #install php GUI
 #public UI on port 80
