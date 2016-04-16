@@ -34,6 +34,7 @@ sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 sudo chmod 755 $HOME/*.py
 sudo chmod 755 $HOME/*.sh
 sudo chmod 666 /home/linaro/rd_bconf_flag
+sudo chmod 666 /home/linaro/wr_bconf_flag
 sudo chmod 666 /home/linaro/bconf
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
