@@ -36,7 +36,6 @@ sudo chmod 755 $HOME/*.sh
 sudo chmod 666 /home/linaro/bconf
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
-sudo cp /home/linaro/bitcoin-box/.hdd/bitseed_ui.conf /etc/init
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
 
 mkdir $HOME/.bitseed
