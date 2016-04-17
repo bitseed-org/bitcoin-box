@@ -21,6 +21,8 @@ sudo echo "bitcoin" > $HOME/.bitseed/coin
 #sudo ./admin-v2-install.sh
 sudo ./admin-2.1alpha-install.sh
 sudo chmod 666 /home/linaro/restartflag
+sudo chmod 666 $HOME/rd_bconf_flag
+sudo chmod 666 $HOME/wr_bconf_flag
 
 #set serial number
 echo "Enter device serial number:"
