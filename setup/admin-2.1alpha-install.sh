@@ -36,6 +36,8 @@ sudo chmod 755 $HOME/*.sh
 sudo chmod 666 /home/linaro/rd_bconf_flag
 sudo chmod 666 /home/linaro/wr_bconf_flag
 sudo chmod 666 /home/linaro/bconf
+echo "0" > $HOME/wr_bconf_mbox
+sudo chmod 666 $HOME/wr_bconf_mbox
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
