@@ -31,16 +31,25 @@ sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
+echo "0" > $HOME/wr_bconf_mbox
+echo "0" > $HOME/rd_bconf_mbox
+sudo chown linaro:linaro *.py
+sudo chown linaro:linaro *.sh
+sudo chown linaro:linaro *flag
+sudo chown linaro:linaro *mbox
 sudo chmod 755 $HOME/*.py
 sudo chmod 755 $HOME/*.sh
 sudo chmod 666 /home/linaro/rd_bconf_flag
 sudo chmod 666 /home/linaro/wr_bconf_flag
 sudo chmod 666 /home/linaro/bconf
-echo "0" > $HOME/wr_bconf_mbox
+sudo chmod 666 $HOME/wr_bconf_mbox
 sudo chmod 666 $HOME/wr_bconf_mbox
 sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
 sudo chmod 666 /home/linaro/updateflag
 sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
+
+
+
 
 mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
