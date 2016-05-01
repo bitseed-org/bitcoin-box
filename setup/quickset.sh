@@ -22,6 +22,8 @@ sudo chown -R linaro:linaro $HOME/.gnupg
 #sudo ./admin-v2-install.sh
 sudo ./admin-2.1alpha-install.sh
 sudo chmod 666 /home/linaro/restartflag
+touch rd_bconf_flag
+touch wr_bconf_flag
 sudo chmod 666 $HOME/rd_bconf_flag
 sudo chmod 666 $HOME/wr_bconf_flag
 
