@@ -18,6 +18,7 @@ sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/onion
 sudo cp BitcoinNodeAdmin/public/onion/index.php /var/www/onion/
 sudo chown -R www-data:www-data /var/www
 sudo chmod 666 /home/linaro/restartflag
+
 #Apache config
 sudo cp BitcoinNodeAdmin/public/000-default.conf  /etc/apache2/sites-enabled/
 sudo cp BitcoinNodeAdmin/public/ports.conf  /etc/apache2/
@@ -29,6 +30,7 @@ sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
 #sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
+sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/.bitseed/bitseed.conf $HOME/.bitseed/
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
 touch $HOME/rd_bconf_flag
