@@ -31,8 +31,10 @@ sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
-echo "0" > $HOME/wr_bconf_mbox
-echo "0" > $HOME/rd_bconf_mbox
+touch $HOME/rd_bconf_flag
+touch $HOME/wr_bconf_flag
+touch $HOME/wr_bconf_mbox
+touch $HOME/rd_bconf_mbox
 sudo chown linaro:linaro $HOME/*.py
 sudo chown linaro:linaro $HOME/*.sh
 sudo chown linaro:linaro $HOME/*flag
