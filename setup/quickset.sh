@@ -5,6 +5,7 @@
 
 sudo rm /etc/mac
 cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
+cp $HOME/.hdd/bitcoin.conf $HOME/.bitcoin
 sudo chown -R linaro:linaro /home/linaro
 chmod 755 /home/linaro/*.sh
 chmod 755 /home/linaro/bitcoin-box/setup/*sh
