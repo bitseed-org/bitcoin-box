@@ -3,12 +3,13 @@
 #sudo apt-get install -y php5 php5-curl
 sudo rm -rf BitcoinNodeAdmin
 sudo rm -rf UI_konn.zip
+sudo rm -rf bitseed-web-ui-master
 #git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
 #wget https://github.com/bitseed-org/BitcoinNodeAdmin/archive/UI_konn.zip
-https://github.com/bitseed-org/bitseed-web-ui/archive/master.zip
+wget https://github.com/bitseed-org/bitseed-web-ui/archive/master.zip
 unzip master.zip
-#rename BitcoinNodeAdmin-UI_konn
-mv BitcoinNodeAdmin-UI_konn BitcoinNodeAdmin
+#rename to BitcoinNodeAdmin
+mv bitseed-web-ui-master BitcoinNodeAdmin
 
 sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/html
 sudo mkdir /var/www/public
