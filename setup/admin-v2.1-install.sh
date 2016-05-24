@@ -29,12 +29,8 @@ sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
 sudo chmod 666 /var/www/html/*.txt
 sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
 sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
-#sudo cp /home/linaro/bitcoin-box/.hdd/lin_rd_bconf_mbox.py /home/linaro
-#sudo cp /home/linaro/bitcoin-box/.hdd/lin_wr_bconf_mbox.py /home/linaro
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/.bitseed/bitseed.conf $HOME/.bitseed/
-#sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
-#sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
 cp $HOME/bitcoin-box/.hdd/restartbtc.sh $HOME
 touch $HOME/rd_bconf_flag
 touch $HOME/wr_bconf_flag
