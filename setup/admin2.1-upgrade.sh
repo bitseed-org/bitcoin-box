@@ -2,6 +2,12 @@
 #upgrades from original Bitseed V2 GUI to v2.1.0
 #must run as sudo
 
+vers=$( < /home/linaro/version)
+echo "version: $vers"
+if (( vers <210 )); then
+  echo "already at v2.1.0"
+  exit
+fi
 sudo apt-get update
 rm -rf bitcoin-box
 bash gitclone.sh
