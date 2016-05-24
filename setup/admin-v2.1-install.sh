@@ -35,6 +35,7 @@ sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/.bitseed/bitseed.conf $HOME/.bitseed/
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_rd_bconf_mbox.py $HOME
 #sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/lin_wr_bconf_mbox.py $HOME
+cp $HOME/bitcoin-box/.hdd/restartbtc.sh $HOME
 touch $HOME/rd_bconf_flag
 touch $HOME/wr_bconf_flag
 touch $HOME/wr_bconf_mbox
