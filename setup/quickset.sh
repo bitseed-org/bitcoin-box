@@ -21,7 +21,7 @@ sudo chown -R linaro:linaro $HOME/.gnupg
 #public UI on port 80
 #private coontrols on port 81
 #sudo ./admin-v2-install.sh
-sudo ./admin-2.1alpha-install.sh
+sudo ./admin-v2.1-install.sh
 sudo chmod 666 /home/linaro/restartflag
 
 #set serial number
