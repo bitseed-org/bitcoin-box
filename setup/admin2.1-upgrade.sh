@@ -4,7 +4,7 @@
 
 vers=$( < /home/linaro/version)
 echo "version: $vers"
-if (( vers <210 )); then
+if [ "$vers" -gt "209" ]; then
   echo "already at v2.1.0"
   exit
 fi
