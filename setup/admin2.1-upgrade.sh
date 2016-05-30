@@ -9,8 +9,8 @@ if [ "$vers" -gt "209" ]; then
   exit
 fi
 sudo apt-get update
-rm -rf bitcoin-box
-rm master.zip
+sudo rm -rf bitcoin-box
+sudo rm master.zip
 bash gitclone.sh
 sudo bash $HOME/bitcoin-box/setup/admin-v2.1-install.sh
 
