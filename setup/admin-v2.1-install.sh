@@ -1,9 +1,9 @@
 #run as sudo
 #installs admin panel into /var/www/html
 #sudo apt-get install -y php5 php5-curl
-sudo rm -rf BitcoinNodeAdmin
-sudo rm -rf UI_konn.zip
-sudo rm -rf bitseed-web-ui-master
+sudo rm -rf $HOME/BitcoinNodeAdmin
+sudo rm -rf $HOME/UI_konn.zip
+sudo rm -rf $HOME/bitseed-web-ui-master
 #git clone https://github.com/BitSeed-org/BitcoinNodeAdmin
 #wget https://github.com/bitseed-org/BitcoinNodeAdmin/archive/UI_konn.zip
 wget https://github.com/bitseed-org/bitseed-web-ui/archive/master.zip
