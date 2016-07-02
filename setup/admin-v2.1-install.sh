@@ -53,7 +53,7 @@ sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
 
 mkdir $HOME/.bitseed
 sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
-sudo echo "210" > /home/linaro/version
+sudo echo "211" > /home/linaro/version
 sudo /etc/init.d/apache2 restart
 
 #echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
