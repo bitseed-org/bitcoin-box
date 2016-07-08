@@ -48,7 +48,7 @@ sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
-echo "210" > /home/linaro/version
+echo "211" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
 #sudo cp $HOME/bitcoind /usr/local/bin
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
