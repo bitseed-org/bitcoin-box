@@ -20,3 +20,4 @@ else
   echo "backup complete. restart bitcoind"
   sh /home/linaro/btcstart.sh
 fi
+fi
