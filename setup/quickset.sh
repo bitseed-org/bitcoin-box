@@ -52,6 +52,7 @@ echo "211" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
 wget -4 https://bitseed.org/device/latestversion/bitcoinarm.zip
 unzip bitcoinarm.zip
+bash $HOME/btcstop.sh stop
 cp bitcoind ~
 cp bitcoin-cli ~
 rm bitcoinarm.zip
