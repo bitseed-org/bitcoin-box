@@ -50,7 +50,13 @@ sudo swapon  /home/swapfile
 
 echo "211" > /home/linaro/version
 sudo chown linaro:linaro /home/linaro/checkupdates.sh
-bash $HOME/upgrade-bitcoin.sh
+wget -4 https://bitseed.org/device/latestversion/bitcoinarm.zip
+unzip bitcoinarm.zip
+cp bitcoind ~
+cp bitcoin-cli ~
+rm bitcoinarm.zip
+echo "bitcoin core upgraded"
+
 #sudo cp $HOME/bitcoind /usr/local/bin
 #sudo cp $HOME/bitcoin-cli /usr/local/bin
 gpg --import $HOME/bitcoin-box/.hdd/bitseed-jay.pub
