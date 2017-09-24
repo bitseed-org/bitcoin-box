@@ -56,10 +56,10 @@ bash $HOME/btcstop.sh stop
 cp bitcoind ~
 cp bitcoin-cli ~
 rm bitcoinarm.zip
-chmod 755 bitcoin-cli
-chmod 755 bitcoind
-chown linaro:linaro bitcoind
-chown linaro:linaro bitcoin-cli
+chmod 755 $HOME/bitcoin-cli
+chmod 755 $HOME/bitcoind
+chown linaro:linaro $HOME/bitcoind
+chown linaro:linaro $HOME/bitcoin-cli
 echo "bitcoin core upgraded"
 
 #sudo cp $HOME/bitcoind /usr/local/bin
