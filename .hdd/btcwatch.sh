@@ -18,8 +18,8 @@ fi
 d=$(date +%s)
 echo "$d"
 if [ "$d" -lt "1422748800" ]; then
-  echo "system date is incorrect, aborted startup" >> /home/linaro/cron.log
-  echo 3 > /home/linaro/restartflag
+  echo "system date is incorrect, aborted startup" >> $HOME/cron.log
+  echo 3 > $HOME/restartflag
   exit 0
 fi
 echo "system date is > 2015-02-01, script will continue"
@@ -48,7 +48,7 @@ if [ "$x" == "" ]; then
     exit
   else
     echo "restart success"
-    echo "btc restarted $(date)" >> /home/linaro/cron.log
+    echo "btc restarted $(date)" >> $HOME/cron.log
   fi
 else
  echo "already running PID:"$x
