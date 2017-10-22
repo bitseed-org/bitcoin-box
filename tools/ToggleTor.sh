@@ -28,7 +28,7 @@ if [ "$status"=="onlynet=Tor" ]; then
     sed -i '/banscore=10000/d' $HOME/.bitcoin/bitcoin.conf
     sed -i '/bantime=11/d' $HOME/.bitcoin/bitcoin.conf
 
-    sh /home/linaro/btcstart.sh
+    sh $HOME/btcstart.sh
 
     else
     exit 
@@ -42,7 +42,7 @@ if [ "$status"=="onlynet=Tor" ]; then
       echo "enable script will run"
       onion=$(<$HOME/onionaddr)
       # configure bitcoin.conf
-      sh /home/linaro/btcstop.sh
+      sh $HOME/btcstop.sh
       echo #Tor Settings
       echo "onlynet=Tor" >> $HOME/.bitcoin/bitcoin.conf
       echo "onion=127.0.0.1:9050" >> $HOME/.bitcoin/bitcoin.conf
@@ -56,7 +56,7 @@ if [ "$status"=="onlynet=Tor" ]; then
       #these lines help limit potential DOS attacks over Tor
       echo "banscore=10000" >> $HOME/.bitcoin/bitcoin.conf
       echo "bantime=11" >> $HOME/.bitcoin/bitcoin.conf
-      sh /home/linaro/btcstart.sh
+      sh $HOME/btcstart.sh
       echo "Tor will now run automatically and publish the bitcoin node as a hidden service"
       echo "Bitcoin will only connect to peers over the Tor Onion network."
       fi
