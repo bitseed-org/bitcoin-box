@@ -18,7 +18,7 @@ fi
 d=$(date +%s)
 echo "$d"
 if [ "$d" -lt "1422748800" ]; then
-  echo "system date is incorrect, aborted startup" >> /home/linaro/cron.log
+  echo "system date is incorrect, aborted startup" >> $HOME/cron.log
   exit 0
 fi
 echo "system date is > 2015-02-01, script will continue"
@@ -35,7 +35,7 @@ if [ "$x" == "" ]; then
   echo "PID:"$x
   if [ "$x" == "" ]; then
     #if bitcoind did not start properly
-    echo "start failed, $(date)" >> /home/linaro/cron.log
+    echo "start failed, $(date)" >> $HOME/cron.log
     echo "start failed, reindex"
 #    rm -rf /home/linaro/.bitcoin
 #    mkdir /home/linaro/.bitcoin
@@ -47,7 +47,7 @@ if [ "$x" == "" ]; then
     exit
   else
     echo "restart success"
-    echo "btc restarted $(date)" >> /home/linaro/cron.log
+    echo "btc restarted $(date)" >> $HOME/cron.log
   fi
 else
  echo "already running PID:"$x
@@ -65,7 +65,7 @@ else
  if [ "$b" -lt "300000" ]; then
    echo "oops! blockheight less than 300K - wait to catch up"
    echo "blockheight less than 300K - needs 1-2w to catch up" >> $HOME/cron.log
-   #sh /home/linaro/btcstop.sh
+   #sh $HOME/btcstop.sh
    sleep 5s
    #rm -rf /home/linaro/.bitcoin
    #mkdir /home/linaro/.bitcoin
@@ -76,4 +76,4 @@ else
    #sh /home/linaro/btcstart.sh
  fi
 fi
-bash $HOME/memwatch.sh
+#bash $HOME/memwatch.sh
