@@ -77,4 +77,4 @@ else
    sh /home/linaro/btcstart.sh
  fi
 fi
-bash $HOME/memwatch.sh
+#bash $HOME/memwatch.sh
