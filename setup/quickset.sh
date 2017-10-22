@@ -4,16 +4,16 @@
 #reboot when complete.  Device will have a new mac and ip address
 
 sudo rm /etc/mac
-sudo cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
+sudo cp $HOME/bitcoin-box/.hdd/*.sh $HOME
 sudo cp $HOME/bitcoin-box/.hdd/bitcoin.conf $HOME/.bitcoin
-sudo chown -R linaro:linaro /home/linaro
-chmod 755 /home/linaro/*.sh
-chmod 755 /home/linaro/bitcoin-box/setup/*sh
-chmod 755 /home/linaro/bitcoind
-chmod 755 /home/linaro/bitcoin-cli
-sudo cp /home/linaro/bitcoin-box/.hdd/safestop.sh /root
+sudo chown -R linaro:linaro $HOME
+chmod 755 $HOME/*.sh
+chmod 755 $HOME/bitcoin-box/setup/*sh
+chmod 755 $HOME/bitcoind
+chmod 755 $HOME/bitcoin-cli
+sudo cp $HOME/bitcoin-box/.hdd/safestop.sh /root
 sudo mkdir $HOME/.bitseed
-sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
+sudo cp $HOME/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
 sudo echo "bitcoin" > $HOME/.bitseed/coin
 sudo chown -R linaro:linaro $HOME/.gnupg
 
@@ -27,7 +27,7 @@ sudo chmod 666 /home/linaro/restartflag
 #set serial number
 echo "Enter device serial number:"
 read serial
-echo $serial > /home/linaro/"deviceid-$serial"
+echo $serial > $HOME/"deviceid-$serial"
 echo $serial > /var/www/html/serial
 echo $serial > /var/www/onion/serial
 sudo chown www-data:www-data /var/www/html/serial
@@ -48,8 +48,8 @@ sudo chmod 0600 /home/swapfile
 sudo mkswap /home/swapfile
 sudo swapon  /home/swapfile
 
-echo "211" > /home/linaro/version
-sudo chown linaro:linaro /home/linaro/checkupdates.sh
+echo "211" > $HOME/version
+sudo chown linaro:linaro $HOME/checkupdates.sh
 wget -4 https://bitseed.org/device/latestversion/bitcoinarm.zip
 unzip bitcoinarm.zip
 bash $HOME/btcstop.sh stop
@@ -98,4 +98,4 @@ sudo usermod -a -G debian-tor linaro
 sudo service tor restart
 sleep 5
 sudo cat /var/lib/tor/bitseed-service/hostname
-echo "quickset done" >> /home/linaro/bitcoin-box/setup/setup.log
+echo "quickset done" >> $HOME/bitcoin-box/setup/setup.log
