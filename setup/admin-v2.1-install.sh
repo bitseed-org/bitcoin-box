@@ -19,7 +19,7 @@ sudo cp BitcoinNodeAdmin/public/index.php /var/www/public/
 sudo cp -r BitcoinNodeAdmin/wallet_light/* /var/www/onion
 sudo cp BitcoinNodeAdmin/public/onion/index.php /var/www/onion/
 sudo chown -R www-data:www-data /var/www
-sudo chmod 666 /home/linaro/restartflag
+sudo chmod 666 $HOME/restartflag
 
 #Apache config
 sudo cp BitcoinNodeAdmin/public/000-default.conf  /etc/apache2/sites-enabled/
@@ -27,8 +27,8 @@ sudo cp BitcoinNodeAdmin/public/ports.conf  /etc/apache2/
 sudo cp BitcoinNodeAdmin/wallet_light/php/*.txt /var/www/html
 
 sudo chmod 666 /var/www/html/*.txt
-sudo chmod 666 /home/linaro/.bitcoin/bitcoin.conf
-sudo cp /home/linaro/bitcoin-box/.hdd/bconf $HOME
+sudo chmod 666 $HOME/.bitcoin/bitcoin.conf
+sudo cp $HOME/bitcoin-box/.hdd/bconf $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/* $HOME
 sudo cp BitcoinNodeAdmin/wallet_light/homedir_scripts/.bitseed/bitseed.conf $HOME/.bitseed/
 cp $HOME/bitcoin-box/.hdd/restartbtc.sh $HOME
@@ -44,25 +44,25 @@ sudo chmod 755 $HOME/*.py
 sudo chmod 755 $HOME/*.sh
 sudo chmod 666 $HOME/rd_bconf_flag
 sudo chmod 666 $HOME/wr_bconf_flag
-sudo chmod 666 /home/linaro/bconf
+sudo chmod 666 $HOME/bconf
 sudo chmod 666 $HOME/wr_bconf_mbox
 sudo chmod 666 $HOME/rd_bconf_mbox
-sudo cp /home/linaro/bitcoin-box/.hdd/updateflag $HOME
-sudo chmod 666 /home/linaro/updateflag
-sudo cp /home/linaro/bitcoin-box/.hdd/startbtc.conf /etc/init
+sudo cp $HOME/bitcoin-box/.hdd/updateflag $HOME
+sudo chmod 666 $HOME/updateflag
+sudo cp $HOME/bitcoin-box/.hdd/startbtc.conf /etc/init
 
 mkdir $HOME/.bitseed
-sudo cp /home/linaro/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
-sudo echo "211" > /home/linaro/version
+sudo cp $HOME/bitcoin-box/.hdd/bitseed.conf $HOME/.bitseed
+sudo echo "211" > $HOME/version
 sudo /etc/init.d/apache2 restart
 
-#echo "edit /home/linaro/reward-addr with your bitcoin address for the bitnodes incentive program"
-echo "replace this line with your bitcoin address" > /home/linaro/reward-addr
-sudo cp /home/linaro/bitcoin-box/.hdd/checkupdates.sh $HOME
-sudo chown 755 /home/linaro/checkupdates.sh
+#echo "edit $HOME/reward-addr with your bitcoin address for the bitnodes incentive program"
+echo "replace this line with your bitcoin address" > $HOME/reward-addr
+sudo cp $HOME/bitcoin-box/.hdd/checkupdates.sh $HOME
+sudo chown 755 $HOME/checkupdates.sh
 sudo apt-get install -y dnsutils
 
-echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
+echo "web admin install done" > $HOME/bitcoin-box/setup/setup.log
 
 #-------------------------------------------
 #Upgrading Bitseed devcies S/N 30 and earlier
@@ -73,9 +73,9 @@ echo "web admin install done" > /home/linaro/bitcoin-box/setup/setup.log
 #upgrade scripts
 #rm -rf bitcoin-box
 #./gitclone.sh
-#cp /home/linaro/bitcoin-box/.hdd/*.sh /home/linaro
-#sudo chown -R linaro:linaro /home/linaro
-#chmod 755 /home/linaro/*.sh
+#cp $HOME/bitcoin-box/.hdd/*.sh $HOME
+#sudo chown -R linaro:linaro $HOME
+#chmod 755 $HOME/*.sh
 #cd bitcoin-box/setup
 #chmod 755 ./admin-panel-install.sh
 #sudo ./admin-panel-install.sh
