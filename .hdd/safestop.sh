@@ -1,12 +1,12 @@
 #!/bin/bash
 #stops bitcoind and shuts down device when /home/linaro/retartflag is set to 2
 #intended to be run by sudo crontab -e  (root crontab) every minute
-rsflag=$( < /home/linaro/restartflag)
+rsflag=$( < $HOME/restartflag)
 #echo "Flag= $rsflag"
 if (( rsflag == 2 )); then
  echo "stopiing bitcoind, please wait"
-echo 0 > /home/linaro/restartflag
-/home/linaro/bitcoin-cli stop
+echo 0 > $HOME/restartflag
+$HOME/bitcoin-cli stop
 echo "Do not shut down the device until notified"
 $x=$(pgrep -f bitcoind)
 while [ "$x" !=  "" ]
