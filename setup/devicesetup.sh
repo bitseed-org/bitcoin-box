@@ -61,6 +61,7 @@ sudo echo "bitseed" >> /etc/hostname
 sudo rm /etc/hosts
 sudo cp /home/linaro/bitcoin-box/setup/hosts /etc/
 
+echo "4" > $HOME/restartflag
 echo "next step:  reboot via sudo reboot"
 echo "after reboot, run ./btcsetup.sh"
 echo "device setup complete" >> /home/linaro/setup.log
