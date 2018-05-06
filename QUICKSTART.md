@@ -28,7 +28,7 @@ Status and Admin Panel via Browser
 SSH Access
 
 * You can access the device via SSH.
-* *Username and Password are on the bottom of the device.*
+* **Username and Password are on the bottom of the device.**
 * Browse to your router’s control panel to see what IP address the Bitseed device is using. Instructions for accessing your router's control panel are available from your ISP and/or included in the box for your router. The network host name of the device is “btc".
 * Linux command line: ssh bitcoin@{paste device IP address here then press enter}
 * Putty is a good Windows app for SSH (https://www.putty.org/).
@@ -44,11 +44,11 @@ Direct access via monitor, mouse and keyboard
 
 The best way to shutdown the device is to stop bitcoin first. This avoids potential blockchain database corruption and will allow a faster restart.  
 
-*Bitseed Web UI instructions* 
+**Bitseed Web UI instructions** 
 
-Navigate from the `Status` page via the left menu. Select `Power` and click the `Powerdown Bitseed Device` button. Bitseed will power off within 2 minutes.
+Navigate from the `Home` page via the left menu. Select `Power` and click the `Powerdown Bitseed Device` button. Bitseed will power off within 2 minutes.
 
-*Command line instructions if operating Bitseed via SSH*
+**Command line instructions if operating Bitseed via SSH**
 
 Enter the command:
 
@@ -65,7 +65,7 @@ Wait until the script says bitcoin has stopped, then enter:
 
 ## Advanced Use
 
-*Scripts*
+**Scripts**
 
 The device contains some scripts that may be useful:
 
