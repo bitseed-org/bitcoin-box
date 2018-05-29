@@ -81,14 +81,14 @@ and
 
 `sudo crontab -e`
 
-## Port 8333 for Bitcoin peer connections
+## Port 8333 for bitcoin peer connections
 
-Bitcoin uses port 8333 to connect with other nodes. To allow other nodes to find your node, Bitcoin will attempt to open port 8333 of your router using the UPnP protocol. If UPnP is not enabled in your router, then the node will only have eight peers. If no more than eight peers are connected, check that UPnP is enabled in the router. If UPnP is not supported, you can manually open port 8333 with the router port forwarding controls. Route external port 8333 to port 8333 of the bitseed device.
+Bitcoin uses port 8333 to connect with other nodes. To allow other nodes to find your node, Bitcoin Core will attempt to open port 8333 of your router using the UPnP protocol. If UPnP is not enabled in your router, then the node will only have eight peers. If no more than eight peers are connected, check that UPnP is enabled in the router. If UPnP is not supported, you can manually open port 8333 with the router port forwarding controls. Route external port 8333 to port 8333 of the Bitseed node.
 
 ## Other notes
 
-* It is best to keep the device running 24/7. If the device is offline for weeks or months, it could take many days for it to catch up with the current block height.
-* On rare occasions, a hard shutdown due to a sudden power loss may cause a database corruption. In the event, Bitcoin Core will re-index the blockchain and build anew data base. This may take several days to a week to reach the current network block
-* Do not unplug the bitseed device from the power cord. Sudden power loss increases the chance that the database will nee to rebuild. Use the shutdown button in the web GUI
+* It is best to keep Bitseed running 24/7. If the node is offline for weeks or months, it could take many days for it to catch up with the current block height.
+* On rare occasions, a hard shutdown due to a sudden power loss may cause a database corruption. In the event, Bitcoin Core will re-index the blockchain and build a new database. This may take several days to a week to reach the current network block
+* Do not unplug the Bitseed from the power cord. Sudden power loss increases the chance that the database will need to rebuild. Use the shutdown button in the web GUI.
 
 _Subscribe to our newsletter at https://bitseed.org/subscribe/ for Bitseed announcements, news, and updates._
