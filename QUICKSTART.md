@@ -1,6 +1,6 @@
 # Using Bitseed 3
 
-This device is delivered with the latest version of bitcoind installed and the blockchain synchronized up to the date of shipment.
+Bitseed 3 nodes are delivered with the latest version of bitcoind installed and the blockchain synchronized up to the date of shipment.
 
 Information and updates can be found at https://bitseed.org.
 
