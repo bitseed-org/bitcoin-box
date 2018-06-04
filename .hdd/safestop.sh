@@ -4,7 +4,7 @@
 rsflag=$( < /home/linaro/restartflag)
 #echo "Flag= $rsflag"
 if (( rsflag == 2 )); then
- echo "stopiing bitcoind, please wait"
+ echo "stopping bitcoind, please wait"
 echo 0 > /home/linaro/restartflag
 $HOME/bitcoin-cli stop
 echo "Do not shut down the device until notified"
