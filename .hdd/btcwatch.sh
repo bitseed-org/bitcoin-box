@@ -63,7 +63,7 @@ else
  rm locblock
  #check of local blockchain is way out of date, if so, restore from backup
  echo "at block:"$b
- if [ "$b" -lt "300000" ] && [ "$disable" != 1 ] ; then
+ if [ "$b" -lt "300000" ] && [ "$disable" != 1 ] && [ -d "/home/linaro/livebak/.bitcoin" ]  ; then
    echo "oops! blockheight less than 300K - restoring from backup"
    echo "blockheight less than 300K - restore from backup" >> $HOME/cron.log
    sh /home/linaro/btcstop.sh
